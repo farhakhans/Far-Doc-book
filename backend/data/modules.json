@@ -1,0 +1,67 @@
+{
+  "modules": [
+    {
+      "id": "module-1-ros2",
+      "title": "ROS 2 Fundamentals",
+      "topics": [
+        "Nodes",
+        "Topics",
+        "Services",
+        "rclpy",
+        "URDF"
+      ],
+      "duration": "3 weeks",
+      "objectives": [
+        "Understand ROS 2 architecture",
+        "Create nodes, topics, and services",
+        "Define robot models in URDF"
+      ]
+    },
+    {
+      "id": "module-2-simulation",
+      "title": "Simulation Environments",
+      "topics": [
+        "Gazebo",
+        "Unity",
+        "Physics Simulation",
+        "Sensor Modeling"
+      ],
+      "duration": "2 weeks",
+      "objectives": [
+        "Create simulation environments",
+        "Model physics and sensors",
+        "Test robot behaviors in simulation"
+      ]
+    },
+    {
+      "id": "module-3-nvidia-isaac",
+      "title": "NVIDIA Isaac Platform",
+      "topics": [
+        "Isaac Sim",
+        "Isaac ROS",
+        "Nav2"
+      ],
+      "duration": "3 weeks",
+      "objectives": [
+        "Use Isaac Sim for complex robotic tasks",
+        "Integrate perception and control systems",
+        "Implement navigation with Nav2"
+      ]
+    },
+    {
+      "id": "module-4-vla",
+      "title": "Vision-Language-Action Systems",
+      "topics": [
+        "Whisper",
+        "LLMs",
+        "Vision-Language-Action Integration"
+      ],
+      "duration": "3 weeks",
+      "objectives": [
+        "Process voice commands",
+        "Generate robot actions",
+        "Create complete Physical AI systems"
+      ]
+    }
+  ]
+}

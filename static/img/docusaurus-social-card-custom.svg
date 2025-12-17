@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#1a2a6c"/>
+  <text x="600" y="300" font-family="Arial, sans-serif" font-size="60" fill="white" text-anchor="middle">Physical AI & Humanoid Robotics</text>
+  <text x="600" y="400" font-family="Arial, sans-serif" font-size="40" fill="white" text-anchor="middle">Bridging Digital AI and Physical Robots</text>
+  <rect x="500" y="450" width="200" height="10" fill="#25c2a0" rx="5"/>
+</svg>

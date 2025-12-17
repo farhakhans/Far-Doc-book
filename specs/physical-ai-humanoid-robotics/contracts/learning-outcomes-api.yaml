@@ -1,0 +1,370 @@
+openapi: 3.0.0
+info:
+  title: Learning Outcomes API
+  description: API for managing learning outcomes in the Physical AI & Humanoid Robotics course
+  version: 1.0.0
+servers:
+  - url: https://api.physical-ai-humanoid-robotics.edu/v1
+    description: Production server
+  - url: https://staging-api.physical-ai-humanoid-robotics.edu/v1
+    description: Staging server
+
+paths:
+  /learning-outcomes:
+    get:
+      summary: List all learning outcomes
+      description: Retrieve a paginated list of all learning outcomes in the course
+      parameters:
+        - name: module
+          in: query
+          description: Filter by module ID
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          description: Page number for pagination
+          required: false
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          description: Number of items per page
+          required: false
+          schema:
+            type: integer
+            default: 10
+            maximum: 100
+      responses:
+        '200':
+          description: Successful response with learning outcomes
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/LearningOutcome'
+                  pagination:
+                    $ref: '#/components/schemas/Pagination'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+
+    post:
+      summary: Create a new learning outcome
+      description: Create a new learning outcome for the course
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - code
+                - description
+                - module_id
+              properties:
+                code:
+                  type: string
+                  example: "LO-001"
+                  description: Unique learning outcome code
+                description:
+                  type: string
+                  example: "Understand the fundamental concepts of Physical AI"
+                  description: Detailed description of the learning outcome
+                module_id:
+                  type: string
+                  example: "module-1-ros2"
+                  description: Module ID this outcome belongs to
+                measurable_indicators:
+                  type: array
+                  items:
+                    type: string
+                  example: ["Student can explain Physical AI vs Digital AI", "Student can identify key challenges in physical systems"]
+                  description: Measurable indicators of achievement
+                assessment_methods:
+                  type: array
+                  items:
+                    type: string
+                  example: ["Written exam", "Practical demonstration"]
+                  description: Methods to assess this outcome
+      responses:
+        '201':
+          description: Learning outcome created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LearningOutcome'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+
+  /learning-outcomes/{outcomeId}:
+    get:
+      summary: Get a specific learning outcome
+      description: Retrieve details of a specific learning outcome by its ID
+      parameters:
+        - name: outcomeId
+          in: path
+          required: true
+          description: Unique identifier of the learning outcome
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with learning outcome details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LearningOutcome'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+
+    put:
+      summary: Update a learning outcome
+      description: Update details of an existing learning outcome
+      parameters:
+        - name: outcomeId
+          in: path
+          required: true
+          description: Unique identifier of the learning outcome
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LearningOutcomeUpdate'
+      responses:
+        '200':
+          description: Learning outcome updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LearningOutcome'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    delete:
+      summary: Delete a learning outcome
+      description: Delete a learning outcome by its ID
+      parameters:
+        - name: outcomeId
+          in: path
+          required: true
+          description: Unique identifier of the learning outcome
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Learning outcome deleted successfully
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+
+  /modules/{moduleId}/learning-outcomes:
+    get:
+      summary: Get learning outcomes for a module
+      description: Retrieve all learning outcomes associated with a specific module
+      parameters:
+        - name: moduleId
+          in: path
+          required: true
+          description: Module ID to retrieve outcomes for
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with module's learning outcomes
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  module_id:
+                    type: string
+                    example: "module-1-ros2"
+                  outcomes:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/LearningOutcome'
+
+components:
+  schemas:
+    LearningOutcome:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "lo-001-physical-ai"
+          description: Unique identifier for the learning outcome
+        code:
+          type: string
+          example: "LO-001"
+          description: Learning outcome code
+        description:
+          type: string
+          example: "Understand the fundamental concepts of Physical AI"
+          description: Detailed description of the learning outcome
+        module_id:
+          type: string
+          example: "module-1-ros2"
+          description: Module ID this outcome belongs to
+        measurable_indicators:
+          type: array
+          items:
+            type: string
+          example: ["Student can explain Physical AI vs Digital AI", "Student can identify key challenges in physical systems"]
+          description: Measurable indicators of achievement
+        assessment_methods:
+          type: array
+          items:
+            type: string
+          example: ["Written exam", "Practical demonstration"]
+          description: Methods to assess this outcome
+        created_at:
+          type: string
+          format: date-time
+          example: "2025-12-15T10:30:00Z"
+          description: Timestamp when the outcome was created
+        updated_at:
+          type: string
+          format: date-time
+          example: "2025-12-15T10:30:00Z"
+          description: Timestamp when the outcome was last updated
+
+    LearningOutcomeUpdate:
+      type: object
+      properties:
+        description:
+          type: string
+          example: "Updated description of the learning outcome"
+          description: Updated description of the learning outcome
+        measurable_indicators:
+          type: array
+          items:
+            type: string
+          example: ["Student can explain Physical AI vs Digital AI", "Student can identify key challenges in physical systems"]
+          description: Updated measurable indicators of achievement
+        assessment_methods:
+          type: array
+          items:
+            type: string
+          example: ["Written exam", "Practical demonstration"]
+          description: Updated methods to assess this outcome
+
+    Pagination:
+      type: object
+      properties:
+        page:
+          type: integer
+          example: 1
+        limit:
+          type: integer
+          example: 10
+        total:
+          type: integer
+          example: 100
+        total_pages:
+          type: integer
+          example: 10
+
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+              example: "VALIDATION_ERROR"
+            message:
+              type: string
+              example: "The request body contains invalid data"
+            details:
+              type: object
+              description: Additional error details
+
+    BadRequest:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+              example: "BAD_REQUEST"
+            message:
+              type: string
+              example: "Invalid request parameters or body"
+            details:
+              type: object
+              description: Additional validation error details
+
+  responses:
+    BadRequest:
+      description: Bad request - validation error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/BadRequest'
+
+    Unauthorized:
+      description: Unauthorized access
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+
+    Forbidden:
+      description: Forbidden access
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+security:
+  - BearerAuth: []
+
+tags:
+  - name: Learning Outcomes
+    description: Operations related to learning outcomes management
+  - name: Modules
+    description: Operations related to course modules

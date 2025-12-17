@@ -1,0 +1,47 @@
+# Git configuration for the Physical AI & Humanoid Robotics project
+
+[core]
+    # Enable color output
+    ui = auto
+
+[help]
+    # Enable auto-correct for Git commands
+    autocorrect = 1
+
+[alias]
+    # Common aliases for faster git operations
+    st = status
+    ci = commit
+    co = checkout
+    br = branch
+    df = diff
+    lg = log --oneline --graph --all
+    pl = pull
+    ps = push
+    amend = commit --amend
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    s = status -s
+    tree = log --oneline --graph --all --decorate
+
+[push]
+    # Default push behavior
+    default = current
+
+[pull]
+    # Rebase when pulling to maintain linear history
+    rebase = true
+
+[merge]
+    # Use recursive strategy with patience for better merge results
+    tool = default
+
+[color]
+    ui = auto
+
+[credential]
+    helper = store
+
+# Include the git completion settings
+[include]
+    path = .git-completion.bash

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP RAG Chatbot Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .result {
+            margin-top: 10px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MCP RAG Chatbot Test</h1>
+
+        <div class="test-section">
+            <h3>Server Health Check</h3>
+            <button id="healthCheck">Check RAG Server Health</button>
+            <button id="mcpHealthCheck">Check MCP Adapter Health</button>
+            <div id="healthResult" class="result"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>MCP Tools Discovery</h3>
+            <button id="toolsCheck">Get Available Tools</button>
+            <div id="toolsResult" class="result"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>Documentation Query Test</h3>
+            <input type="text" id="queryInput" placeholder="Enter your query" style="width: 70%; padding: 8px;" value="What is ROS 2?">
+            <button id="queryTest">Test Query via MCP</button>
+            <div id="queryResult" class="result"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>Direct RAG Server Test (for comparison)</h3>
+            <button id="directTest">Test Direct RAG API</button>
+            <div id="directResult" class="result"></div>
+        </div>
+    </div>
+
+    <script>
+        // Test functions
+        async function checkRAGHealth() {
+            try {
+                const response = await fetch('http://localhost:5003/health');
+                const data = await response.json();
+                document.getElementById('healthResult').innerHTML = JSON.stringify(data, null, 2);
+
+                const statusDiv = document.createElement('div');
+                statusDiv.className = 'status success';
+                statusDiv.textContent = '✓ RAG Server is accessible and healthy';
+                document.getElementById('healthResult').appendChild(statusDiv);
+            } catch (error) {
+                document.getElementById('healthResult').innerHTML = `Error: ${error.message}`;
+
+                const statusDiv = document.createElement('div');
+                statusDiv.className = 'status error';
+                statusDiv.textContent = '✗ RAG Server is not accessible. Please start the RAG server (npm start)';
+                document.getElementById('healthResult').appendChild(statusDiv);
+            }
+        }
+
+        async function checkMCPHealth() {
+            try {
+                const response = await fetch('http://localhost:5001/health');
+                const data = await response.json();
+                document.getElementById('healthResult').innerHTML = JSON.stringify(data, null, 2);
+
+                const statusDiv = document.createElement('div');
+                statusDiv.className = 'status success';
+                statusDiv.textContent = '✓ MCP Adapter is accessible and healthy';
+                document.getElementById('healthResult').appendChild(statusDiv);
+            } catch (error) {
+                document.getElementById('healthResult').innerHTML = `Error: ${error.message}`;
+
+                const statusDiv = document.createElement('div');
+                statusDiv.className = 'status error';
+                statusDiv.textContent = '✗ MCP Adapter is not accessible. Please start the MCP adapter (node mcp-adapter.js)';
+                document.getElementById('healthResult').appendChild(statusDiv);
+            }
+        }
+
+        async function getTools() {
+            try {
+                const response = await fetch('http://localhost:5001/tools');
+                const data = await response.json();
+                document.getElementById('toolsResult').innerHTML = JSON.stringify(data, null, 2);
+
+                const statusDiv = document.createElement('div');
+                statusDiv.className = 'status success';
+                statusDiv.textContent = `✓ Found ${data.tools.length} tools in MCP adapter`;
+                document.getElementById('toolsResult').appendChild(statusDiv);
+            } catch (error) {
+                document.getElementById('toolsResult').innerHTML = `Error: ${error.message}`;
+
+                const statusDiv = document.createElement('div');
+                statusDiv.className = 'status error';
+                statusDiv.textContent = '✗ Could not retrieve tools from MCP adapter';
+                document.getElementById('toolsResult').appendChild(statusDiv);
+            }
+        }
+
+        async function testQuery() {
+            const query = document.getElementById('queryInput').value || 'What is ROS 2?';
+
+            try {
+                const response = await fetch('http://localhost:5001/execute', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        tool_name: 'ask_documentation',
+                        arguments: {
+                            query: query,
+                            context_size: 2
+                        }
+                    })
+                });
+
+                const data = await response.json();
+                document.getElementById('queryResult').innerHTML = JSON.stringify(data, null, 2);
+
+                if (data.success) {
+                    const statusDiv = document.createElement('div');
+                    statusDiv.className = 'status success';
+                    statusDiv.textContent = '✓ Query executed successfully via MCP';
+                    document.getElementById('queryResult').appendChild(statusDiv);
+                } else {
+                    const statusDiv = document.createElement('div');
+                    statusDiv.className = 'status error';
+                    statusDiv.textContent = '✗ Query failed via MCP';
+                    document.getElementById('queryResult').appendChild(statusDiv);
+                }
+            } catch (error) {
+                document.getElementById('queryResult').innerHTML = `Error: ${error.message}`;
+
+                const statusDiv = document.createElement('div');
+                statusDiv.className = 'status error';
+                statusDiv.textContent = '✗ Query execution failed';
+                document.getElementById('queryResult').appendChild(statusDiv);
+            }
+        }
+
+        async function testDirectRAG() {
+            try {
+                const response = await fetch('http://localhost:5003/api/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        message: 'What is ROS 2?',
+                        contextSize: 2
+                    })
+                });
+
+                const data = await response.json();
+                document.getElementById('directResult').innerHTML = JSON.stringify(data, null, 2);
+
+                const statusDiv = document.createElement('div');
+                statusDiv.className = 'status info';
+                statusDiv.textContent = 'Direct RAG API response (for comparison)';
+                document.getElementById('directResult').appendChild(statusDiv);
+            } catch (error) {
+                document.getElementById('directResult').innerHTML = `Error: ${error.message}`;
+
+                const statusDiv = document.createElement('div');
+                statusDiv.className = 'status error';
+                statusDiv.textContent = '✗ Direct RAG API call failed';
+                document.getElementById('directResult').appendChild(statusDiv);
+            }
+        }
+
+        // Event listeners
+        document.getElementById('healthCheck').addEventListener('click', checkRAGHealth);
+        document.getElementById('mcpHealthCheck').addEventListener('click', checkMCPHealth);
+        document.getElementById('toolsCheck').addEventListener('click', getTools);
+        document.getElementById('queryTest').addEventListener('click', testQuery);
+        document.getElementById('directTest').addEventListener('click', testDirectRAG);
+    </script>
+</body>
+</html>

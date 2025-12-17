@@ -1,0 +1,408 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Physical AI & Humanoid Robotics Book Content API",
+    "version": "1.0.0",
+    "description": "API contract for accessing and managing content in the Physical AI & Humanoid Robotics book"
+  },
+  "paths": {
+    "/api/content/intro": {
+      "get": {
+        "summary": "Get introduction content",
+        "description": "Retrieve the introduction section of the Physical AI & Humanoid Robotics book",
+        "responses": {
+          "200": {
+            "description": "Introduction content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BookSection"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/content/modules": {
+      "get": {
+        "summary": "Get all modules",
+        "description": "Retrieve all modules in the Physical AI & Humanoid Robotics book",
+        "parameters": [
+          {
+            "name": "moduleNumber",
+            "in": "query",
+            "description": "Filter by specific module number",
+            "schema": {
+              "type": "integer",
+              "enum": [1, 2, 3, 4]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of modules",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Module"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/content/modules/{moduleNumber}": {
+      "get": {
+        "summary": "Get specific module",
+        "description": "Retrieve a specific module by number",
+        "parameters": [
+          {
+            "name": "moduleNumber",
+            "in": "path",
+            "required": true,
+            "description": "Module number (1-4)",
+            "schema": {
+              "type": "integer",
+              "enum": [1, 2, 3, 4]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Module content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Module"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Module not found"
+          }
+        }
+      }
+    },
+    "/api/content/weekly/{weekNumber}": {
+      "get": {
+        "summary": "Get weekly content",
+        "description": "Retrieve content for a specific week",
+        "parameters": [
+          {
+            "name": "weekNumber",
+            "in": "path",
+            "required": true,
+            "description": "Week number (1-13)",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 13
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Weekly content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WeeklyBreakdown"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Week not found"
+          }
+        }
+      }
+    },
+    "/api/content/hardware": {
+      "get": {
+        "summary": "Get hardware specifications",
+        "description": "Retrieve hardware requirements and options",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "description": "Filter by hardware type",
+            "schema": {
+              "type": "string",
+              "enum": ["workstation", "sensor", "robot", "kit"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Hardware specifications",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HardwareSpecification"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "/api/content/assessments": {
+      "get": {
+        "summary": "Get all assessments",
+        "description": "Retrieve all assessment projects",
+        "parameters": [
+          {
+            "name": "moduleNumber",
+            "in": "query",
+            "description": "Filter by associated module",
+            "schema": {
+              "type": "integer",
+              "enum": [1, 2, 3, 4]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of assessments",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AssessmentProject"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BookSection": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the section"
+          },
+          "title": {
+            "type": "string",
+            "description": "Title of the section"
+          },
+          "slug": {
+            "type": "string",
+            "description": "URL-friendly identifier"
+          },
+          "content": {
+            "type": "string",
+            "description": "Main content in Markdown format"
+          },
+          "order": {
+            "type": "integer",
+            "description": "Display order in navigation"
+          },
+          "prerequisites": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Other sections that should be read first"
+          },
+          "learningOutcomes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "What students should learn from this section"
+          },
+          "codeExamples": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CodeExample"
+            },
+            "description": "Embedded code examples"
+          }
+        },
+        "required": ["id", "title", "content", "order"]
+      },
+      "Module": {
+        "type": "object",
+        "properties": {
+          "moduleNumber": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+          },
+          "title": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "string",
+            "description": "Expected time to complete"
+          },
+          "topics": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tools": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "practicalExercises": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": ["moduleNumber", "title", "duration", "topics"]
+      },
+      "WeeklyBreakdown": {
+        "type": "object",
+        "properties": {
+          "weekNumber": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 13
+          },
+          "topics": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "readings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "assignments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "objectives": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": ["weekNumber", "topics", "objectives"]
+      },
+      "CodeExample": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "fileLocation": {
+            "type": "string"
+          }
+        },
+        "required": ["title", "language", "code"]
+      },
+      "AssessmentProject": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "module": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+          },
+          "description": {
+            "type": "string"
+          },
+          "requirements": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evaluationCriteria": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "deliverables": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "estimatedTime": {
+            "type": "string"
+          }
+        },
+        "required": ["title", "module", "description"]
+      },
+      "HardwareSpecification": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["workstation", "sensor", "robot", "kit"]
+          },
+          "specs": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "cost": {
+            "type": "string"
+          },
+          "alternatives": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "compatibility": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "useCase": {
+            "type": "string"
+          }
+        },
+        "required": ["name", "type", "specs"]
+      }
+    }
+  }
+}
