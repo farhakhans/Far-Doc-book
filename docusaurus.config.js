@@ -1,26 +1,29 @@
 // @ts-check
-// `@type` JSDoc annotations allow IDEs and type checkers to type-check this file
-// even if they don't support TypeScript syntax.
+// `@type` JSDoc annotations allow IDEs and type checkers
+// to scan the JS code and display type information.
+
+// NOTE: Make sure to run `npm install` or `yarn install` first.
+
+import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Physical AI & Humanoid Robotics',
-  tagline: 'Bridging Digital AI and Physical Robots',
-  favicon: 'img/f logo final (1).jpg',
+  title: 'Physical AI Humanoid Robotics Education',
+  tagline: 'Comprehensive curriculum for physical AI and humanoid robotics',
+  favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-username.github.io',
+  url: 'https://your-docusaurus-site.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub Pages deployment, this is often '/<org-name>/<repo-name>/'
-  baseUrl: '/physical-ai-humanoid-robotics-book/',
+  // For GitHub pages deployment, it is often '/<projectName>/'
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'your-username', // Usually your GitHub org/user name.
-  projectName: 'physical-ai-humanoid-robotics-book', // Usually your repo name.
-  deploymentBranch: 'gh-pages', // The branch to deploy to.
+  organizationName: 'facebook', // Usually your GitHub org/user name.
+  projectName: 'docusaurus', // Usually your repo name.
 
-  onBrokenLinks: 'warn',
+  onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -37,51 +40,47 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/your-username/physical-ai-humanoid-robotics-book/tree/main/',
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: false, // Disable blog for this educational book
+        blog: {
+          showReadingTime: true,
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl:
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: './src/css/custom.css',
         },
       }),
     ],
   ],
 
-  scripts: [
-    {
-      src: '/rag-chatbot/simple-chatbot.js',
-      async: true,
-    },
-  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Physical AI & Humanoid Robotics',
+        title: 'Physical AI Humanoid Robotics',
         logo: {
-          alt: 'Physical AI Logo',
-          src: 'img/f logo final (1).jpg',
+          alt: 'Robot Logo',
+          src: 'img/robot-arm.svg',
         },
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Book',
-          },
-          {
-            to: '/docs/intro',
             label: 'Docs',
-            position: 'left',
           },
+          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/farhakhans/physical-ai-humanoid-robotics-book',
+            href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
             position: 'right',
           },
@@ -91,19 +90,11 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Content',
+            title: 'Docs',
             items: [
               {
-                label: 'Introduction',
+                label: 'Tutorial',
                 to: '/docs/intro',
-              },
-              {
-                label: 'All Modules',
-                to: '/docs/modules/',
-              },
-              {
-                label: 'AI Models Overview',
-                to: '/docs/models/',
               },
             ],
           },
@@ -118,26 +109,33 @@ const config = {
                 label: 'Discord',
                 href: 'https://discordapp.com/invite/docusaurus',
               },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/docusaurus',
+              },
             ],
           },
           {
             title: 'More',
             items: [
               {
+                label: 'Blog',
+                to: '/blog',
+              },
+              {
                 label: 'GitHub',
-                href: 'https://github.com/your-username/physical-ai-humanoid-robotics-book',
+                href: 'https://github.com/facebook/docusaurus',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics Book. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Physical AI Humanoid Robotics Education. Built with Docusaurus.`,
       },
       prism: {
-        theme: require('prism-react-renderer').themes.github,
-        darkTheme: require('prism-react-renderer').themes.dracula,
-        additionalLanguages: ['python', 'bash', 'json', 'yaml'],
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
       },
     }),
 };
 
-module.exports = config;
+export default config;

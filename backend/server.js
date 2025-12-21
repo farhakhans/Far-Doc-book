@@ -1,65 +1,41 @@
-// Basic Express.js server for the Physical AI & Humanoid Robotics Book project
 const express = require('express');
 const cors = require('cors');
-const path = require('path');
+const mongoose = require('mongoose');
+require('dotenv').config();
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
-// Serve static files from the 'public' directory (where Docusaurus builds to)
-app.use(express.static(path.join(__dirname, 'public')));
+// Database connection
+mongoose.connect(process.env.DATABASE_URL || 'mongodb://localhost:27017/robotics-edu', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log('MongoDB connected'))
+.catch(err => console.log('MongoDB connection error:', err));
 
-// API Routes
-app.get('/api/health', (req, res) => {
-  res.json({ status: 'OK', timestamp: new Date().toISOString() });
+// Routes
+app.get('/', (req, res) => {
+  res.json({ message: 'Physical AI Humanoid Robotics Backend API' });
 });
 
-const fs = require('fs');
-const path = require('path');
-
-// Get book content metadata
-app.get('/api/book/metadata', (req, res) => {
-  const modulesPath = path.join(__dirname, 'data', 'modules.json');
-  const modulesData = JSON.parse(fs.readFileSync(modulesPath, 'utf8'));
-
+// Example route for educational content
+app.get('/api/content', (req, res) => {
+  const modules = require('./data/modules.json');
   res.json({
-    title: 'Physical AI & Humanoid Robotics',
-    description: 'Bridging Digital AI and Physical Robots',
-    version: '1.0.0',
-    moduleCount: modulesData.modules.length,
-    modules: modulesData.modules.map(m => m.title)
+    modules: modules
   });
 });
 
-// Get learning outcomes
-app.get('/api/learning-outcomes', (req, res) => {
-  res.json({
-    outcomes: [
-      'Understand core concepts of Physical AI and embodied intelligence',
-      'Master ROS 2 concepts including nodes, topics, services, rclpy, and URDF',
-      'Implement simulation environments with Gazebo and Unity',
-      'Work with NVIDIA Isaac tools including Isaac Sim, Isaac ROS, and Nav2',
-      'Create Vision-Language-Action systems using Whisper and LLMs'
-    ]
-  });
-});
-
-// Get all modules
-app.get('/api/modules', (req, res) => {
-  const modulesPath = path.join(__dirname, 'data', 'modules.json');
-  const modulesData = JSON.parse(fs.readFileSync(modulesPath, 'utf8'));
-  res.json(modulesData);
-});
-
-// Get a specific module by ID
-app.get('/api/modules/:id', (req, res) => {
-  const modulesPath = path.join(__dirname, 'data', 'modules.json');
-  const modulesData = JSON.parse(fs.readFileSync(modulesPath, 'utf8'));
-  const module = modulesData.modules.find(m => m.id === req.params.id);
+// Get specific module by ID
+app.get('/api/content/:id', (req, res) => {
+  const modules = require('./data/modules.json');
+  const moduleId = parseInt(req.params.id);
+  const module = modules.find(m => m.id === moduleId);
 
   if (module) {
     res.json(module);
@@ -68,12 +44,17 @@ app.get('/api/modules/:id', (req, res) => {
   }
 });
 
-// Catch-all handler for frontend routes (Docusaurus)
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// Example route for assessments
+app.get('/api/assessments', (req, res) => {
+  res.json({
+    assessments: [
+      { id: 1, title: 'ROS2 Basics Quiz', module: 'ROS2 Fundamentals' },
+      { id: 2, title: 'Simulation Project', module: 'Simulation' },
+      { id: 3, title: 'Isaac Navigation Challenge', module: 'NVIDIA Isaac' }
+    ]
+  });
 });
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
-  console.log(`Health check: http://localhost:${PORT}/api/health`);
 });

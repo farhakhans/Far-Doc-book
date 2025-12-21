@@ -1,8 +1,8 @@
 {
   "label": "Modules",
-  "position": 2,
+  "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "Learn about the core modules of Physical AI & Humanoid Robotics"
+    "description": "Comprehensive modules covering Physical AI and Humanoid Robotics"
   }
 }

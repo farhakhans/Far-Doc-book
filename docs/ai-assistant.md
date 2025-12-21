@@ -2,51 +2,100 @@
 sidebar_position: 100
 ---
 
-# AI Assistant
+# AI Assistant Integration
 
-## Introduction
-
-The Physical AI & Humanoid Robotics book includes an AI assistant to help you navigate the content and find information quickly. The assistant is available on every page of the book as a chat interface in the bottom-right corner.
+The Physical AI Humanoid Robotics educational platform includes an integrated AI assistant to help students with learning, troubleshooting, and exploration of robotics concepts.
 
 ## Features
 
-The AI assistant can help you with:
+### Learning Support
+- Concept explanations for robotics fundamentals
+- Code assistance for ROS2 and related frameworks
+- Troubleshooting help for common issues
+- Best practices recommendations
 
-- Finding specific modules and topics in the book
-- Locating practical exercises and projects
-- Getting information about hardware requirements
-- Understanding the weekly breakdown structure
-- Exploring learning outcomes
-- Navigating complex topics like ROS 2, simulation environments, and NVIDIA Isaac tools
+### Interactive Learning
+- Step-by-step guidance through exercises
+- Real-time feedback on implementations
+- Personalized learning paths
+- Progress tracking and recommendations
 
-## How to Use
+## Technical Implementation
 
-1. Look for the chat icon 💬 in the bottom-right corner of any page
-2. Click the icon to open the AI assistant
-3. Type your question about the Physical AI & Humanoid Robotics content
-4. The assistant will provide relevant information and guide you to appropriate sections
+### Architecture
+The AI assistant is implemented using modern language models integrated with:
+- Context-aware retrieval systems
+- Code understanding capabilities
+- Robotics-specific knowledge base
+- Interactive conversation management
 
-## Example Queries
+### Integration Points
+- **Documentation Search**: Find relevant documentation quickly
+- **Code Examples**: Generate and explain robotics code
+- **Problem Solving**: Help debug robotics implementations
+- **Concept Clarification**: Explain complex robotics concepts
 
-Try asking the AI assistant questions like:
+## Usage Guidelines
 
-- "What's in Module 1?"
-- "How do I get started with ROS 2?"
-- "Show me the simulation exercises"
-- "What are the hardware requirements?"
-- "Tell me about Vision-Language-Action systems"
-- "Where can I find practical exercises?"
+### Getting Help
+1. Use specific technical terms when asking questions
+2. Include relevant context about your current project
+3. Ask for code examples when implementing concepts
+4. Request explanations of complex topics
+
+### Best Practices
+- Be specific about your robotics platform (ROS2, Isaac Sim, etc.)
+- Include error messages when seeking troubleshooting help
+- Ask for multiple approaches to complex problems
+- Use the assistant to explore "what if" scenarios
 
 ## Capabilities
 
-The AI assistant understands queries related to:
+### ROS2 Assistance
+- Node creation and management
+- Publisher/subscriber patterns
+- Service and action implementations
+- URDF and Xacro modeling
+- Launch file creation
 
-- **ROS 2 Fundamentals**: Nodes, topics, services, rclpy, URDF
-- **Simulation Environments**: Gazebo, Unity, physics simulation
-- **NVIDIA Isaac Platform**: Isaac Sim, Isaac ROS, Nav2
-- **Vision-Language-Action Systems**: Whisper, LLMs, multimodal integration
-- **Practical Exercises**: Hands-on projects and implementations
-- **Hardware Requirements**: Different kit options and specifications
-- **Weekly Breakdown**: 13-week academic schedule and learning objectives
+### Simulation Support
+- Gazebo model configuration
+- Unity simulation setup
+- Physics parameter tuning
+- Sensor simulation implementation
 
-The assistant is designed to help you quickly find the information you need in the Physical AI & Humanoid Robotics book, making your learning experience more efficient and enjoyable.
+### NVIDIA Isaac Guidance
+- Isaac Sim usage and configuration
+- Isaac ROS package integration
+- Navigation2 setup and tuning
+- GPU acceleration optimization
+
+### Vision-Language-Action Systems
+- Multimodal system design
+- LLM integration patterns
+- Whisper voice processing
+- End-to-end learning approaches
+
+## Limitations
+
+### Current Limitations
+- May not have real-time access to the latest package versions
+- Cannot execute code or directly modify files
+- Accuracy depends on training data and context
+- Complex hardware-specific issues may require additional research
+
+### Safety Considerations
+- Verify all code suggestions before implementation
+- Test in simulation before real hardware deployment
+- Follow proper safety protocols for physical robots
+- Use appropriate validation for autonomous systems
+
+## Feedback and Improvement
+
+The AI assistant continuously learns from interactions to improve its responses. When using the assistant:
+- Provide feedback on helpful or unhelpful responses
+- Report incorrect information or outdated advice
+- Suggest improvements for specific robotics topics
+- Share successful implementation patterns
+
+The AI assistant is designed to complement traditional learning materials and provide personalized support for your robotics education journey.

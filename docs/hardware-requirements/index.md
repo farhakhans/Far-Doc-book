@@ -4,57 +4,42 @@ sidebar_position: 1
 
 # Hardware Requirements Overview
 
-## Introduction
+This section outlines the various hardware configurations available for the Physical AI Humanoid Robotics program. We offer multiple options to accommodate different budgets, space constraints, and learning objectives.
 
-This document outlines the hardware requirements for implementing the Physical AI & Humanoid Robotics curriculum. The requirements are structured to accommodate different budget levels and educational contexts, from economy setups for introductory courses to full humanoid platforms for advanced research.
+## Available Kits
 
-## Hardware Categories
+We provide three primary hardware configurations:
 
-### 1. Workstation Requirements
-- **Development workstations** for simulation and programming
-- **Edge computing platforms** for robot control
-- **Cloud computing** alternatives for resource-intensive tasks
+- **Economy Kit**: Cost-effective solution for individual learners and small groups
+- **Edge Kit**: Mid-tier solution with enhanced capabilities for more advanced projects
+- **Robot Lab Options**: Comprehensive setup for institutional use with multiple stations
 
-### 2. Robot Platforms
-- **Economy kit**: Basic mobile robot for ROS 2 and simulation learning
-- **Edge kit**: Advanced mobile robot with perception capabilities
-- **Robot lab options**: Multiple robots for laboratory settings
-- **Humanoid platforms**: Full humanoid robots for advanced research
+## Selection Guide
 
-### 3. Sensor and Actuator Requirements
-- **Vision systems**: Cameras, depth sensors, and processing units
-- **Navigation sensors**: LIDAR, IMU, GPS, and encoders
-- **Manipulation systems**: Grippers, arms, and end-effectors
+Choosing the right hardware configuration depends on several factors:
 
-## Architecture Summary
+- **Budget**: Available funding for hardware acquisition
+- **Space**: Physical space available for robot operation
+- **Scale**: Number of students who will use the hardware
+- **Objectives**: Specific learning goals and project complexity
+- **Maintenance**: Resources available for ongoing hardware maintenance
 
-| Component | Economy Kit | Edge Kit | Robot Lab | Humanoid Platform |
-|-----------|-------------|----------|-----------|-------------------|
-| Compute Platform | Raspberry Pi 4 | NVIDIA Jetson Orin | Multiple Jetson Orin | Humanoid Computer |
-| Vision System | 2x RGB cameras | RGB-D camera + IMU | Multiple RGB-D + LIDAR | Stereo cameras + depth |
-| Navigation | Wheel encoders | LIDAR + IMU | Multi-sensor fusion | Full-body perception |
-| Manipulation | Basic gripper | 5-DOF arm | Multiple arms | Humanoid hands |
-| Connectivity | WiFi | WiFi + Ethernet | Mesh network | Integrated |
-| Power System | Battery pack | Intelligent battery | Central power | Integrated |
+## Common Components
 
-## Budget Considerations
+All configurations include:
 
-### Cost Ranges
-- **Economy Kit**: $500-1,500 per unit
-- **Edge Kit**: $2,000-5,000 per unit
-- **Robot Lab**: $10,000-50,000 total lab setup
-- **Humanoid Platform**: $25,000-100,000+ per unit
+- Computing platform (varies by kit)
+- Basic sensors (IMU, cameras, encoders)
+- Control electronics
+- Power systems
+- Basic structural components
 
-### Total Cost of Ownership
-- Initial hardware costs
-- Maintenance and replacement
-- Software licensing (if applicable)
-- Training and support costs
+## Additional Considerations
 
-## Educational Scalability
+- Shipping and import duties (for international orders)
+- Local safety regulations and compliance
+- Insurance and warranty options
+- Training and support services
+- Future upgrade paths
 
-The hardware requirements are designed to scale from individual student projects to institutional robotics labs, allowing for:
-- Progressive learning with increasing complexity
-- Cost-effective implementation at different educational levels
-- Upgrade paths as resources allow
-- Shared resources for multiple students
+Select your appropriate hardware configuration from the menu to see detailed specifications and pricing.

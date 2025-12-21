@@ -4,83 +4,77 @@ sidebar_position: 1
 
 # Assessments Overview
 
-## Assessment Structure
-
-The Physical AI & Humanoid Robotics course includes multiple assessment types designed to evaluate both theoretical understanding and practical implementation skills:
-
-### Continuous Assessment (60%)
-- **Weekly Assignments**: 30%
-- **Practical Exercises**: 20%
-- **Project Milestones**: 10%
-
-### Capstone Assessment (40%)
-- **Mid-term Project**: 15%
-- **Final Capstone Project**: 25%
+This section provides an overview of the assessment methods used throughout the Physical AI Humanoid Robotics educational program. Assessments are designed to evaluate both theoretical understanding and practical implementation skills.
 
 ## Assessment Philosophy
 
 Our assessment approach emphasizes:
-- **Practical Application**: Real-world implementation of concepts
-- **Iterative Development**: Continuous improvement through feedback
-- **Multimodal Integration**: Assessment of integrated systems
-- **Safety and Ethics**: Responsible robotics development
+- **Practical Application**: Demonstrating skills through implementation
+- **Progressive Complexity**: Building from basic to advanced concepts
+- **Real-World Relevance**: Tasks that mirror actual robotics challenges
+- **Continuous Feedback**: Regular evaluation and improvement opportunities
 
-## Learning Outcome Alignment
+## Assessment Types
 
-Each assessment directly aligns with specific learning outcomes:
+### Formative Assessments
+- **Quizzes**: Knowledge checks throughout modules
+- **Code Reviews**: Peer and instructor feedback on implementations
+- **Simulation Tests**: Validating robot behaviors in controlled environments
+- **Peer Evaluations**: Collaborative learning and feedback
 
-| Assessment | LO-001 | LO-002 | LO-003 | LO-004 | LO-005 | LO-006 |
-|------------|--------|--------|--------|--------|--------|--------|
-| Weekly Assignments | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Practical Exercises | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Mid-term Project | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Final Capstone | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+### Summative Assessments
+- **Module Projects**: Comprehensive projects at the end of each module
+- **Integration Challenges**: Multi-module tasks requiring system integration
+- **Capstone Project**: Complete robotics system implementation
+- **Portfolio Review**: Collection of best work throughout the program
 
-## Assessment Criteria
+## Grading Criteria
 
-### Technical Excellence (40%)
-- Correct implementation of concepts
-- Efficient and optimized code
+### Technical Proficiency (40%)
+- Correct implementation of robotics concepts
 - Proper use of frameworks and tools
-- Adherence to best practices
+- Code quality and documentation
+- System performance and efficiency
 
-### Innovation and Problem-Solving (25%)
-- Creative approaches to challenges
-- Effective problem-solving strategies
-- Novel solutions to complex problems
-- Adaptation of techniques to new contexts
+### Problem-Solving (30%)
+- Analysis of complex robotics problems
+- Creative solutions to implementation challenges
+- Troubleshooting and debugging skills
+- Optimization and improvement initiatives
 
-### Integration and Systems Thinking (20%)
-- Effective integration of multiple components
-- Understanding of system interactions
-- Consideration of emergent behaviors
-- Holistic approach to design
+### Understanding (20%)
+- Theoretical knowledge of robotics concepts
+- Ability to explain implementation decisions
+- Understanding of system trade-offs
+- Recognition of limitations and improvements
 
-### Documentation and Communication (15%)
-- Clear and comprehensive documentation
-- Effective technical communication
-- Proper code documentation
-- Clear presentation of results
+### Communication (10%)
+- Clear documentation and code comments
+- Effective presentation of results
+- Collaboration and teamwork (where applicable)
+- Professional communication standards
 
-## Grading Scale
+## Assessment Schedule
 
-- **A (90-100%)**: Exceptional work demonstrating mastery of concepts and innovative application
-- **B (80-89%)**: Good work showing solid understanding and competent implementation
-- **C (70-79%)**: Adequate work meeting basic requirements with some understanding
-- **D (60-69%)**: Below expectations with significant gaps in understanding
-- **F (Below 60%)**: Inadequate work failing to meet course requirements
+Assessments are distributed throughout the program to provide regular feedback and track progress:
 
-## Academic Integrity
+- **Weekly**: Small quizzes and practical exercises
+- **Module-end**: Comprehensive projects demonstrating module concepts
+- **Mid-program**: Integration challenges combining multiple modules
+- **Program-end**: Capstone project integrating all learned concepts
 
-All assessments must represent your own work. Collaboration is encouraged for learning, but individual submissions must be your own implementation. Proper attribution must be given for any external resources used.
+## Resources and Support
 
-## Submission Guidelines
+### Assessment Resources
+- **Rubrics**: Detailed grading criteria for each assessment
+- **Examples**: Sample submissions and best practices
+- **Templates**: Standardized formats for submissions
+- **Tools**: Software and platforms for assessment completion
 
-- All code submissions must include proper documentation
-- Reports should follow the provided templates
-- Demonstrations should be recorded when possible
-- Late submissions may be penalized unless prior arrangements are made
+### Support Systems
+- **Office Hours**: Regular instructor availability
+- **Peer Support**: Collaborative learning opportunities
+- **Online Resources**: Supplementary materials and tutorials
+- **Extension Policy**: Accommodations for exceptional circumstances
 
-## Feedback and Improvement
-
-Constructive feedback will be provided for all assessments to support continuous learning and improvement. Students are encouraged to iterate on their work based on feedback received.
+Select specific assessment types from the sidebar to view detailed information, requirements, and examples.

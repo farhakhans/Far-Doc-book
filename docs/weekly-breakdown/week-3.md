@@ -2,109 +2,171 @@
 sidebar_position: 3
 ---
 
-# Week 3: Simulation Environments - Gazebo Fundamentals
+# Week 3: Physics Simulation and Environment Modeling
 
 ## Learning Objectives
-By the end of Week 3, students will be able to:
-- Set up and configure Gazebo simulation environment
-- Create custom world files with obstacles and environments
-- Integrate robots with Gazebo physics simulation
-- Implement sensor simulation for cameras and LIDAR
+By the end of this week, students will be able to:
+- Configure and optimize physics simulation parameters
+- Create realistic simulation environments
+- Model complex sensor behaviors in simulation
+- Validate simulation accuracy against real-world data
 
-## Day 1: Gazebo Installation and Setup
-### Topics Covered
-- Gazebo installation and configuration
-- Gazebo interface and basic controls
-- ROS 2 integration with Gazebo
-- Basic simulation concepts
+## Day 1: Physics Simulation Fundamentals
+### Morning Session (3 hours)
+- **Physics Engine Concepts** (2 hours)
+  - Overview of physics engines (ODE, Bullet, PhysX)
+  - Rigid body dynamics and constraints
+  - Collision detection algorithms
+  - Numerical integration methods and stability
 
-### Readings
-- Module 2, Sections 1.1-1.2: Gazebo Introduction
-- Gazebo documentation and tutorials
+- **Gazebo Physics Configuration** (1 hour)
+  - Physics engine selection and parameters
+  - Time step configuration and real-time factors
+  - Gravity and global physics settings
+  - Solver parameters and optimization
 
-### Activities
-- Install Gazebo and verify installation
-- Launch basic Gazebo world
-- Explore Gazebo interface and tools
-- Connect to ROS 2 topics
+### Afternoon Session (3 hours)
+- **Practical Exercise: Physics Parameter Tuning** (2 hours)
+  - Configure different physics engines
+  - Tune parameters for stability and accuracy
+  - Compare performance and behavior
+  - Document optimal settings for different scenarios
 
-## Day 2: World Creation and Environment Design
-### Topics Covered
-- SDF (Simulation Description Format) basics
-- Creating custom world files
-- Adding terrain, lighting, and obstacles
-- World composition and organization
+- **Physics Validation Techniques** (1 hour)
+  - Methods for validating physics simulation
+  - Comparison with analytical solutions
+  - Real-world validation approaches
+  - Common physics-related issues and solutions
 
-### Readings
-- Module 2, Sections 1.3-1.4: World Creation
-- SDF specification and examples
+## Day 2: Advanced Environment Modeling
+### Morning Session (3 hours)
+- **Complex Environment Design** (2 hours)
+  - Multi-room and outdoor environment creation
+  - Terrain generation and modeling
+  - Dynamic and static object placement
+  - Lighting and material configuration
 
-### Activities
-- Create custom indoor environment
-- Add obstacles and interactive objects
-- Configure lighting and atmospheric effects
-- Test world loading in Gazebo
+- **SDF (Simulation Description Format)** (1 hour)
+  - SDF structure and elements
+  - World file creation and configuration
+  - Model inclusion and instantiation
+  - Advanced SDF features and capabilities
 
-## Day 3: Robot Integration in Gazebo
-### Topics Covered
-- Spawning robots in Gazebo
-- Robot-World interaction
-- Physics properties configuration
-- Joint and actuator simulation
+### Afternoon Session (3 hours)
+- **Practical Exercise: Environment Creation** (2 hours)
+  - Design and implement complex simulation environment
+  - Configure terrain with varied properties
+  - Add static and dynamic objects
+  - Optimize for performance and realism
 
-### Readings
-- Module 2, Sections 1.5-1.6: Robot Integration
-- Gazebo-ROS robot spawning
+- **Environment Optimization** (1 hour)
+  - Performance optimization techniques
+  - Level of detail (LOD) systems
+  - Occlusion culling and frustum culling
+  - Resource management strategies
 
-### Activities
-- Spawn custom robot model in Gazebo
-- Configure physics properties
-- Test robot movement in simulation
-- Debug common integration issues
+## Day 3: Sensor Simulation in Depth
+### Morning Session (3 hours)
+- **Camera Sensor Simulation** (1.5 hours)
+  - Pinhole camera model implementation
+  - Depth, RGB, and stereo camera simulation
+  - Lens distortion and optical effects
+  - Image quality and noise modeling
 
-## Day 4: Sensor Simulation
-### Topics Covered
-- Camera sensor simulation
-- LIDAR sensor simulation
-- IMU and other sensor types
-- Sensor noise and calibration
+- **LiDAR and Range Sensor Simulation** (1.5 hours)
+  - 2D and 3D LiDAR simulation
+  - Beam divergence and multi-return modeling
+  - Range accuracy and noise characteristics
+  - Performance optimization for high-resolution sensors
 
-### Readings
-- Module 2, Sections 2.1-2.2: Sensor Modeling
-- Gazebo sensor plugins documentation
+### Afternoon Session (3 hours)
+- **IMU and Force Sensor Simulation** (1.5 hours)
+  - Accelerometer and gyroscope modeling
+  - Magnetometer simulation and calibration
+  - Force/torque sensor integration
+  - Noise and bias modeling
 
-### Activities
-- Add camera sensor to robot
-- Configure LIDAR sensor parameters
-- Test sensor data publication
-- Validate sensor outputs
+- **Multi-Sensor Fusion in Simulation** (1.5 hours)
+  - Sensor synchronization and timing
+  - Data fusion techniques in simulation
+  - Cross-validation of sensor data
+  - Handling sensor failures and errors
 
-## Day 5: Week 3 Integration and Testing
-### Topics Covered
-- Complete robot simulation setup
-- Sensor data validation
-- Performance optimization
+## Day 4: Advanced Simulation Techniques
+### Morning Session (3 hours)
+- **Dynamic Environment Elements** (2 hours)
+  - Moving objects and articulated environments
+  - Physics-based environmental interactions
+  - Procedural environment generation
+  - Weather and atmospheric effects
 
-### Activities
-- Integrate all components into complete system
-- Test robot navigation in simulated environment
-- Validate sensor data quality
-- Prepare for Week 4
+- **Simulation Performance Optimization** (1 hour)
+  - Multi-threading and parallel processing
+  - GPU acceleration for physics simulation
+  - Memory management and optimization
+  - Distributed simulation concepts
 
-## Assignments Due
-- Assignment 3.1: Custom Gazebo World (Due Day 3)
-- Assignment 3.2: Robot Sensor Integration (Due Day 5)
+### Afternoon Session (3 hours)
+- **Practical Exercise: Dynamic Environment** (2 hours)
+  - Create simulation with moving elements
+  - Implement physics-based environmental interactions
+  - Optimize for real-time performance
+  - Test with various robot configurations
 
-## Assessment
-- Gazebo environment setup: 20%
-- Custom world creation: 25%
-- Robot and sensor integration: 30%
+- **Performance Analysis** (1 hour)
+  - Simulation profiling and monitoring
+  - Bottleneck identification and resolution
+  - Performance vs. accuracy trade-offs
+  - Resource utilization optimization
 
-## Resources
-- [Gazebo Documentation](http://gazebosim.org/)
-- [Gazebo Tutorials](http://gazebosim.org/tutorials)
-- [SDF Specification](http://sdformat.org/)
-- [Week 3 Slides](#) (to be posted)
+## Day 5: Validation and Real-World Comparison
+### Morning Session (2 hours)
+- **Simulation Validation Methods** (1.5 hours)
+  - Quantitative validation techniques
+  - Comparison with real-world data
+  - Statistical analysis of simulation accuracy
+  - Validation metrics and benchmarks
 
-## Next Week Preview
-Week 4 explores Unity as an alternative simulation environment with high-fidelity graphics and advanced rendering capabilities for robotics applications.
+- **Week Review and Q&A** (0.5 hours)
+  - Review key concepts and implementation challenges
+  - Address remaining questions
+  - Prepare for next week's topics
+
+### Afternoon Session (2 hours)
+- **Integration Assessment** (1.5 hours)
+  - Complete simulation environment with robot
+  - Validate physics and sensor simulation
+  - Test performance and accuracy
+  - Document findings and recommendations
+
+- **Week 4 Preview and Preparation** (0.5 hours)
+  - Overview of Unity simulation platform
+  - Required installations and setup
+  - Assignment of preliminary Week 4 tasks
+
+## Resources and Materials
+- Physics simulation theory and implementation guides
+- Gazebo advanced tutorials and documentation
+- Sensor modeling best practices
+- Performance optimization techniques
+- Validation methodology resources
+
+## Assignments
+1. Create a complex simulation environment with varied terrain
+2. Implement and validate physics parameters for robot model
+3. Configure and test multiple sensor types in simulation
+4. Document simulation accuracy and performance metrics
+
+## Assessment Methods
+- Practical implementation of simulation environment
+- Physics parameter validation and optimization
+- Sensor simulation accuracy assessment
+- Performance and stability evaluation
+
+## Support and Office Hours
+- Daily office hours: 4-5 PM
+- Physics simulation debugging sessions
+- Performance optimization assistance
+- Validation methodology guidance
+
+This week provides comprehensive coverage of physics simulation and environment modeling, essential skills for creating realistic and effective robotics simulations that accurately represent real-world conditions.

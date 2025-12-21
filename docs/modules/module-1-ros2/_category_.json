@@ -1,8 +1,8 @@
 {
-  "label": "Module 1: ROS 2 Fundamentals",
-  "position": 1,
+  "label": "Module 1: ROS2 Fundamentals",
+  "position": 2,
   "link": {
-    "type": "doc",
-    "id": "modules/module-1-ros2/index"
+    "type": "generated-index",
+    "description": "Introduction to Robot Operating System 2 fundamentals"
   }
 }

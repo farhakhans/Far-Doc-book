@@ -1,96 +1,62 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-# Quarter Overview: Capstone Experience
+# Program Overview
 
-## The Physical AI Capstone Quarter
+The Physical AI Humanoid Robotics educational program represents a cutting-edge curriculum designed to prepare students for the future of robotics and artificial intelligence. This program combines theoretical foundations with hands-on practice to create well-rounded robotics engineers.
 
-This 13-week quarter is designed as a comprehensive capstone experience that brings together all aspects of Physical AI and humanoid robotics. You'll progress from foundational concepts to advanced implementations, culminating in a sophisticated Vision-Language-Action system.
+## Program Philosophy
 
-## Introduction to Physical AI
+Our approach is grounded in the belief that the future of robotics lies in the seamless integration of physical systems with artificial intelligence. We emphasize:
 
-Physical AI represents the convergence of artificial intelligence with physical systems. Unlike traditional AI that operates purely in digital spaces, Physical AI must navigate the complexities of the real world:
+- **Embodied Intelligence**: Understanding how physical interaction shapes intelligent behavior
+- **Practical Application**: Moving beyond theory to implement real robotic systems
+- **System Integration**: Connecting perception, cognition, and action in unified systems
+- **Scalable Learning**: Building skills that transfer from simulation to reality
 
-- **Uncertainty**: Real sensors provide noisy, incomplete data
-- **Physics**: Systems must respect physical laws and constraints
-- **Real-time constraints**: Decisions must be made within strict timing requirements
-- **Safety**: Systems must operate safely around humans and environments
-- **Embodiment**: Intelligence emerges from the interaction between agent and environment
+## Curriculum Structure
 
-## Humanoid Robots: The Ultimate Challenge
+The curriculum is organized into four progressive modules, each building upon the previous one:
 
-Humanoid robots represent one of the most challenging domains for Physical AI due to their:
+### Module 1: ROS2 Fundamentals
+Foundation concepts for modern robotics software development, focusing on distributed systems and robot communication.
 
-- **Complex kinematics**: Multiple degrees of freedom requiring sophisticated control
-- **Bipedal locomotion**: Dynamic balance and gait control
-- **Human-like interaction**: Natural communication modalities
-- **Versatility**: Ability to operate in human-designed environments
-- **Safety requirements**: Close interaction with humans necessitates careful design
+### Module 2: Simulation
+Advanced simulation techniques for testing and developing robotic systems in safe, repeatable environments.
 
-## Core Tools and Technologies
+### Module 3: NVIDIA Isaac
+Integration with industry-leading robotics platforms and GPU-accelerated AI systems.
 
-Throughout this quarter, you'll work with industry-standard tools and frameworks:
+### Module 4: Vision-Language-Action Systems
+Cutting-edge approaches to embodied AI that connect perception, language, and motor control.
 
-### ROS 2 (Robot Operating System 2)
-- **Purpose**: Middleware for robotics applications
-- **Key components**: Nodes, topics, services, parameters
-- **Languages**: Python (rclpy), C++ (rclcpp)
-- **Use case**: Communication between robot components
+## Technology Stack
 
-### Simulation Environments
-- **Gazebo**: Physics-based simulation with realistic sensor models
-- **Unity**: Game engine-based simulation with high-quality graphics
-- **Purpose**: Safe testing of algorithms before real-world deployment
-- **Advantages**: Deterministic, repeatable experiments
+The program leverages state-of-the-art tools and platforms:
 
-### NVIDIA Isaac Platform
-- **Isaac Sim**: Advanced simulation for robotics and AI
-- **Isaac ROS**: ROS 2 packages for perception and navigation
-- **Nav2**: Navigation stack for mobile robots
-- **Purpose**: High-performance simulation and deployment tools
+- **ROS2**: Robot Operating System 2 for robotics software development
+- **Gazebo/Unity**: Physics simulation environments
+- **NVIDIA Isaac**: GPU-accelerated robotics development platform
+- **Large Language Models**: Integration of advanced AI for robot cognition
+- **Open-Source Tools**: Emphasis on accessible, community-driven technologies
 
-### Vision-Language-Action (VLA) Systems
-- **Whisper**: Speech recognition for voice commands
-- **LLMs**: Large Language Models for planning and reasoning
-- **Integration**: End-to-end systems that understand, plan, and act
-- **Capstone**: Voice-controlled humanoid robot demonstration
+## Pedagogical Approach
 
-## Learning Progression
+Learning occurs through a combination of:
 
-This quarter follows a carefully designed progression:
+- **Theory Sessions**: Foundational concepts and principles
+- **Hands-On Labs**: Direct implementation and experimentation
+- **Project-Based Learning**: Real-world applications and challenges
+- **Collaborative Work**: Team-based problem solving
+- **Reflection and Iteration**: Continuous improvement through assessment
 
-### Weeks 1-3: Foundations
-- ROS 2 fundamentals (nodes, topics, services)
-- Basic robot control and sensor integration
-- Introduction to physical AI concepts
+## Expected Outcomes
 
-### Weeks 4-6: Simulation
-- Gazebo physics simulation
-- Sensor modeling and integration
-- Safe testing of control algorithms
+Graduates of this program will be equipped to:
 
-### Weeks 7-9: Advanced Platforms
-- NVIDIA Isaac tools and frameworks
-- Perception systems (computer vision, LIDAR)
-- Navigation and path planning
-
-### Weeks 10-13: Integration
-- Vision-Language-Action systems
-- Capstone project development
-- Integration of all learned concepts
-
-## Assessment Structure
-
-Your learning will be assessed through:
-
-- **Module Projects**: Hands-on projects at the end of each major module
-- **Weekly Exercises**: Practical applications of weekly concepts
-- **Capstone Project**: Integration of all concepts in a final demonstration
-- **Peer Review**: Collaborative learning through code and design review
-
-## Hardware Requirements
-
-While simulation forms the core of this quarter, we'll also explore real-world applications with various hardware options, from economy kits to full humanoid platforms, ensuring accessibility for all students.
-
-This quarter is designed to provide you with the skills needed to contribute to the rapidly evolving field of Physical AI and humanoid robotics. Let's begin with the foundational ROS 2 concepts in Module 1.
+- Develop sophisticated robotic systems that integrate AI and physical control
+- Work effectively with modern robotics platforms and tools
+- Contribute to cutting-edge research in physical AI
+- Adapt to rapidly evolving robotics technologies
+- Lead interdisciplinary teams in robotics development

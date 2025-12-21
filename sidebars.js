@@ -3,43 +3,68 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   tutorialSidebar: [
+    'intro',
     {
       type: 'category',
-      label: 'Introduction',
-      items: ['intro', 'intro/overview', 'intro/learning-outcomes'],
+      label: 'Hardware Requirements',
+      items: [
+        'hardware-requirements/index',
+        'hardware-requirements/economy-kit',
+        'hardware-requirements/edge-kit',
+        'hardware-requirements/robot-lab-options',
+        'hardware-requirements/workstations',
+      ],
     },
     {
       type: 'category',
       label: 'Modules',
       items: [
-        'modules/module-1-ros2/index',
-        'modules/module-1-ros2/nodes-topics-services',
-        'modules/module-1-ros2/rclpy',
-        'modules/module-1-ros2/urdf',
-        'modules/module-1-ros2/practical-exercises',
-        'modules/module-2-simulation/index',
-        'modules/module-2-simulation/gazebo',
-        'modules/module-2-simulation/unity',
-        'modules/module-2-simulation/physics-simulation',
-        'modules/module-2-simulation/sensor-modeling',
-        'modules/module-2-simulation/practical-exercises',
-        'modules/module-3-nvidia-isaac/index',
-        'modules/module-3-nvidia-isaac/isaac-sim',
-        'modules/module-3-nvidia-isaac/isaac-ros',
-        'modules/module-3-nvidia-isaac/nav2',
-        'modules/module-3-nvidia-isaac/practical-exercises',
-        'modules/module-4-vla/index',
-        'modules/module-4-vla/vision-language-action',
-        'modules/module-4-vla/whisper',
-        'modules/module-4-vla/llms',
-        'modules/module-4-vla/practical-exercises',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'AI Models',
-      items: [
-        'models/index',
+        'modules/index',
+        {
+          type: 'category',
+          label: 'Module 1: ROS2 Fundamentals',
+          items: [
+            'modules/module-1-ros2/index',
+            'modules/module-1-ros2/nodes-topics-services',
+            'modules/module-1-ros2/rclpy',
+            'modules/module-1-ros2/urdf',
+            'modules/module-1-ros2/practical-exercises',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Module 2: Simulation',
+          items: [
+            'modules/module-2-simulation/index',
+            'modules/module-2-simulation/gazebo',
+            'modules/module-2-simulation/unity',
+            'modules/module-2-simulation/physics-simulation',
+            'modules/module-2-simulation/sensor-modeling',
+            'modules/module-2-simulation/practical-exercises',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Module 3: NVIDIA Isaac',
+          items: [
+            'modules/module-3-nvidia-isaac/index',
+            'modules/module-3-nvidia-isaac/isaac-sim',
+            'modules/module-3-nvidia-isaac/isaac-ros',
+            'modules/module-3-nvidia-isaac/nav2',
+            'modules/module-3-nvidia-isaac/practical-exercises',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Module 4: Vision-Language-Action',
+          items: [
+            'modules/module-4-vla/index',
+            'modules/module-4-vla/vision-language-action',
+            'modules/module-4-vla/llms',
+            'modules/module-4-vla/whisper',
+            'modules/module-4-vla/practical-exercises',
+          ],
+        },
       ],
     },
     {
@@ -66,28 +91,22 @@ const sidebars = {
       label: 'Assessments',
       items: [
         'assessments/index',
+        'assessments/capstone-project',
+        'assessments/isaac-project',
         'assessments/ros2-project',
         'assessments/simulation-project',
-        'assessments/isaac-project',
-        'assessments/capstone-project',
       ],
     },
     {
       type: 'category',
-      label: 'Hardware Requirements',
+      label: 'Models',
       items: [
-        'hardware-requirements/index',
-        'hardware-requirements/workstations',
-        'hardware-requirements/edge-kit',
-        'hardware-requirements/robot-lab-options',
-        'hardware-requirements/economy-kit',
+        'models/index',
+        'models/physical-ai',
+        'models/humanoid-robotics',
       ],
-    },
-    {
-      type: 'doc',
-      id: 'ai-assistant',
     },
   ],
 };
 
-module.exports = sidebars;
+export default sidebars;

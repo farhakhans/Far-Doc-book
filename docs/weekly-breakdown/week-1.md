@@ -2,104 +2,162 @@
 sidebar_position: 1
 ---
 
-# Week 1: Introduction to Physical AI & ROS 2 Fundamentals
+# Week 1: Introduction to Physical AI and Humanoid Robotics
 
 ## Learning Objectives
-By the end of Week 1, students will be able to:
-- Explain the fundamental concepts of Physical AI and embodied intelligence
-- Understand the architecture and components of ROS 2
-- Set up and configure a ROS 2 development environment
-- Create basic ROS 2 nodes with publishers and subscribers
+By the end of this week, students will be able to:
+- Understand the fundamental concepts of Physical AI and its applications
+- Identify the key components of humanoid robotics systems
+- Set up the development environment for robotics programming
+- Navigate the course structure and expectations
 
-## Day 1: Physical AI Concepts
-### Topics Covered
-- Introduction to Physical AI vs. Digital AI
-- Embodied intelligence principles
-- Applications of Physical AI in robotics
-- Safety considerations in physical systems
+## Day 1: Course Introduction and Physical AI Concepts
+### Morning Session (3 hours)
+- **Course Overview** (1 hour)
+  - Introduction to Physical AI Humanoid Robotics program
+  - Learning objectives and assessment methods
+  - Course structure and weekly breakdown
+  - Introduction to instructors and support staff
 
-### Readings
-- Module 1, Sections 1.1-1.3: Introduction to Physical AI
-- Overview of Physical AI fundamentals
+- **Physical AI Fundamentals** (2 hours)
+  - Definition and principles of Physical AI
+  - Distinction from traditional AI approaches
+  - Embodied cognition and sensorimotor integration
+  - Applications in humanoid robotics
 
-### Activities
-- Class discussion: "What makes Physical AI different from traditional AI?"
-- Reading assignment on embodied intelligence
-- Introduction to the course structure and expectations
+### Afternoon Session (3 hours)
+- **Development Environment Setup** (2 hours)
+  - Installing ROS2 (Humble Hawksbill)
+  - Setting up development workspace
+  - Basic ROS2 tools and commands
+  - Troubleshooting common setup issues
 
-## Day 2: ROS 2 Architecture
-### Topics Covered
-- ROS 2 ecosystem and middleware
-- Nodes, packages, and workspaces
-- DDS (Data Distribution Service) concepts
-- ROS 2 distributions and setup
+- **Introduction to Robotics Simulation** (1 hour)
+  - Overview of simulation environments
+  - Benefits of simulation in robotics development
+  - Safety considerations in simulation vs. real hardware
 
-### Readings
-- Module 1, Sections 2.1-2.2: ROS 2 Fundamentals
-- ROS 2 documentation on architecture
+## Day 2: Humanoid Robotics Overview
+### Morning Session (3 hours)
+- **Humanoid Robotics Concepts** (2 hours)
+  - Definition and characteristics of humanoid robots
+  - Historical development and current state
+  - Applications in research and industry
+  - Challenges and opportunities
 
-### Activities
-- Install ROS 2 Humble Hawksbill
-- Create first ROS 2 workspace
-- Explore ROS 2 command line tools
+- **Humanoid Robot Architectures** (1 hour)
+  - Mechanical design considerations
+  - Control system architectures
+  - Sensor integration approaches
+  - Power and communication systems
 
-## Day 3: Basic Communication Patterns
-### Topics Covered
-- Publisher-subscriber pattern
-- Topics and message types
-- Creating simple publisher and subscriber nodes
-- Using ROS 2 tools (ros2 topic, ros2 node)
+### Afternoon Session (3 hours)
+- **Robot Operating System 2 (ROS2) Introduction** (2 hours)
+  - ROS2 architecture and concepts
+  - Nodes, topics, services, and actions
+  - Package management and workspace organization
+  - Basic ROS2 commands and tools
 
-### Readings
-- Module 1, Sections 2.3-2.4: Communication Patterns
-- ROS 2 tutorials on topics and messages
+- **Hands-on ROS2 Practice** (1 hour)
+  - Creating first ROS2 package
+  - Writing simple publisher and subscriber
+  - Running and debugging basic nodes
 
-### Activities
-- Create a simple publisher node
-- Create a corresponding subscriber node
-- Test communication between nodes
+## Day 3: Basic ROS2 Programming
+### Morning Session (3 hours)
+- **ROS2 Programming Fundamentals** (2 hours)
+  - Node creation and lifecycle management
+  - Publisher and subscriber implementation
+  - Service and action clients/servers
+  - Message and service definitions
 
-## Day 4: Services and Parameters
-### Topics Covered
-- Service-client pattern
-- Request-response communication
-- ROS 2 parameters system
-- Configuration management
+- **ROS2 Tools and Debugging** (1 hour)
+  - Using ROS2 command-line tools
+  - Visualization tools (RViz2)
+  - Debugging techniques and best practices
+  - Performance profiling tools
 
-### Readings
-- Module 1, Sections 2.5-2.6: Services and Parameters
-- ROS 2 documentation on services
+### Afternoon Session (3 hours)
+- **Practical Exercise: Basic Robot Control** (3 hours)
+  - Implement simple robot movement control
+  - Create nodes for velocity command publishing
+  - Subscribe to sensor data
+  - Implement basic safety checks
 
-### Activities
-- Create a service server
-- Create a service client
-- Implement parameter-based configuration
+## Day 4: Introduction to Simulation
+### Morning Session (3 hours)
+- **Simulation Fundamentals** (2 hours)
+  - Physics simulation concepts
+  - Real-time vs. accelerated simulation
+  - Accuracy vs. performance trade-offs
+  - Common simulation platforms
 
-## Day 5: Week 1 Review and Lab
-### Topics Covered
-- Review of Week 1 concepts
-- Troubleshooting ROS 2 issues
-- Planning for Week 2
+- **Gazebo Simulation Environment** (1 hour)
+  - Introduction to Gazebo
+  - Basic world and model concepts
+  - Integration with ROS2
+  - Setting up simulation environments
 
-### Activities
-- Lab session: Complete ROS 2 tutorial exercises
-- Q&A session on Week 1 topics
-- Assignment: Basic ROS 2 system implementation
+### Afternoon Session (3 hours)
+- **Hands-on Simulation Setup** (2 hours)
+  - Installing and configuring Gazebo
+  - Creating simple robot model (URDF)
+  - Adding Gazebo plugins to robot model
+  - Running first simulation
 
-## Assignments Due
-- Assignment 1.1: ROS 2 Environment Setup (Due Day 2)
-- Assignment 1.2: Basic Publisher-Subscriber System (Due Day 5)
+- **Robot Model Creation** (1 hour)
+  - Basic URDF concepts
+  - Creating simple robot structure
+  - Adding visual and collision properties
+  - Validating URDF model
 
-## Assessment
-- Participation in class discussions: 10%
-- ROS 2 environment setup verification: 15%
-- Basic communication system implementation: 25%
+## Day 5: Week Review and Assessment
+### Morning Session (2 hours)
+- **Week Review and Q&A** (1 hour)
+  - Review of key concepts from the week
+  - Addressing student questions and concerns
+  - Troubleshooting common issues
+  - Preview of next week's topics
 
-## Resources
-- [ROS 2 Documentation](https://docs.ros.org/en/humble/)
-- [Physical AI & Humanoid Robotics Book](/docs/intro)
-- [Week 1 Slides](#) (to be posted)
-- [ROS 2 Tutorials](https://docs.ros.org/en/humble/Tutorials.html)
+- **Practical Assessment** (1 hour)
+  - Basic ROS2 node implementation
+  - Simple simulation setup
+  - Documentation and code quality review
 
-## Next Week Preview
-Week 2 will focus on advanced ROS 2 concepts including rclpy, URDF, and basic robot modeling. Students should review Python programming concepts and prepare for hands-on robot simulation exercises.
+### Afternoon Session (2 hours)
+- **Independent Practice** (1 hour)
+  - Students work on week's exercises
+  - Instructor availability for questions
+  - Peer collaboration and assistance
+
+- **Preparation for Week 2** (1 hour)
+  - Overview of Week 2 topics
+  - Required readings and preparation
+  - Assignment of preliminary Week 2 tasks
+
+## Resources and Materials
+- Course textbook chapters 1-3
+- ROS2 Humble documentation
+- Gazebo simulation tutorials
+- Sample code repositories
+- Development environment setup guides
+
+## Assignments
+1. Complete ROS2 basic tutorial exercises
+2. Create and simulate a simple wheeled robot
+3. Document the development environment setup process
+4. Research one humanoid robot and prepare brief presentation
+
+## Assessment Methods
+- Practical implementation exercises
+- Code review and documentation
+- Peer evaluation of robot models
+- Quiz on Physical AI concepts
+
+## Support and Office Hours
+- Daily office hours: 4-5 PM
+- Online support forum
+- Peer collaboration groups
+- Additional tutoring sessions as needed
+
+This week establishes the foundational knowledge and tools necessary for the remainder of the course, with emphasis on practical implementation and hands-on learning.

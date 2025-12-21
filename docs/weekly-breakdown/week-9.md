@@ -2,111 +2,171 @@
 sidebar_position: 9
 ---
 
-# Week 9: Voice Processing with Whisper for Robotics
+# Week 9: Large Language Models and Robotics Integration
 
 ## Learning Objectives
-By the end of Week 9, students will be able to:
-- Install and configure Whisper for voice processing
-- Implement real-time voice recognition for robotics
-- Integrate Whisper with VLA systems
-- Create voice-controlled robot interfaces
+By the end of this week, students will be able to:
+- Integrate large language models (LLMs) with robotic systems
+- Implement prompt engineering for robotics tasks
+- Create context-aware robotic command interpretation
+- Develop safety mechanisms for LLM-robotic systems
 
-## Day 1: Whisper Installation and Setup
-### Topics Covered
-- Whisper installation and dependencies
-- Model selection and configuration
-- Audio input processing
-- Basic transcription testing
+## Day 1: LLM Fundamentals for Robotics
+### Morning Session (3 hours)
+- **Large Language Model Architectures** (2 hours)
+  - Transformer-based models overview
+  - GPT, BERT, and specialized robotics models
+  - Model scaling and capabilities
+  - Limitations and challenges in robotics
 
-### Readings
-- Module 4, Sections 3.1-3.2: Whisper Introduction
-- Whisper documentation and setup guides
+- **LLM Integration Approaches** (1 hour)
+  - API-based integration vs. local deployment
+  - Model selection criteria for robotics
+  - Resource requirements and constraints
+  - Latency and real-time considerations
 
-### Activities
-- Install Whisper and dependencies
-- Test different model sizes
-- Configure audio input devices
-- Verify basic transcription functionality
+### Afternoon Session (3 hours)
+- **Practical Exercise: LLM Setup** (2 hours)
+  - Install and configure LLM interface
+  - Test basic language understanding
+  - Evaluate model response quality
+  - Benchmark performance characteristics
 
-## Day 2: Audio Processing for Robotics
-### Topics Covered
-- Audio preprocessing techniques
-- Noise reduction and filtering
-- Voice activity detection
-- Audio quality optimization
+- **LLM Safety and Reliability** (1 hour)
+  - Hallucination detection and mitigation
+  - Safety constraints and validation
+  - Error handling and fallback strategies
+  - Monitoring and logging requirements
 
-### Readings
-- Module 4, Sections 3.3-3.4: Audio Processing
-- Audio processing for robotics applications
+## Day 2: Prompt Engineering for Robotics
+### Morning Session (3 hours)
+- **Effective Prompt Design** (2 hours)
+  - Prompt structure and components
+  - Examples and few-shot learning
+  - Constraints and formatting
+  - Context management in prompts
 
-### Activities
-- Implement audio preprocessing pipeline
-- Test noise reduction techniques
-- Configure voice activity detection
-- Optimize audio quality for robotics
+- **Robotics-Specific Prompting** (1 hour)
+  - Task decomposition prompts
+  - Spatial reasoning prompts
+  - Safety-aware prompting techniques
+  - Multi-modal prompt integration
 
-## Day 3: Real-time Voice Recognition
-### Topics Covered
-- Real-time audio streaming
-- Latency optimization
-- Continuous recognition systems
-- Buffer management
+### Afternoon Session (3 hours)
+- **Practical Exercise: Robotics Prompt Development** (2.5 hours)
+  - Create prompts for navigation tasks
+  - Develop manipulation command prompts
+  - Test prompt effectiveness and reliability
+  - Optimize prompts for accuracy
 
-### Readings
-- Module 4, Sections 3.5-3.6: Real-time Processing
-- Real-time audio processing techniques
+- **Prompt Validation and Testing** (0.5 hours)
+  - Testing framework for prompts
+  - Validation metrics and criteria
+  - A/B testing for prompt optimization
+  - Documentation of effective patterns
 
-### Activities
-- Implement real-time audio streaming
-- Optimize for low latency
-- Test continuous recognition
-- Manage audio buffers efficiently
+## Day 3: Context Management and Memory
+### Morning Session (3 hours)
+- **Conversation Context Management** (1.5 hours)
+  - Maintaining dialogue history
+  - Context window management
+  - Memory compression and retrieval
+  - Multi-turn interaction handling
 
-## Day 4: Voice Command Processing
-### Topics Covered
-- Command validation and filtering
-- Intent recognition from voice
-- Confidence scoring and validation
-- Error handling and recovery
+- **Robot State and World Context** (1.5 hours)
+  - Integrating robot state with LLM context
+  - Environmental state tracking
+  - Task progress monitoring
+  - Context synchronization mechanisms
 
-### Readings
-- Module 4, Sections 3.7-3.8: Voice Command Processing
-- Natural language understanding for voice
+### Afternoon Session (3 hours)
+- **Practical Exercise: Context System** (2.5 hours)
+  - Implement conversation memory system
+  - Integrate robot state tracking
+  - Test multi-turn interactions
+  - Validate context accuracy and persistence
 
-### Activities
-- Implement command validation system
-- Create intent recognition pipeline
-- Add confidence scoring
-- Implement error handling
+- **Context Optimization** (0.5 hours)
+  - Memory management strategies
+  - Context compression techniques
+  - Performance optimization
+  - Scalability considerations
 
-## Day 5: Voice Integration with VLA Systems
-### Topics Covered
-- Integration with existing VLA components
-- Voice-to-action mapping
-- Multimodal voice interfaces
-- Performance optimization
+## Day 4: Advanced LLM-Robotics Integration
+### Morning Session (3 hours)
+- **Task Planning with LLMs** (2 hours)
+  - High-level task decomposition
+  - Sequential and parallel task planning
+  - Resource allocation and scheduling
+  - Dynamic replanning capabilities
 
-### Activities
-- Integrate voice processing with VLA system
-- Create voice-to-action mapping
-- Test multimodal interfaces
-- Optimize system performance
+- **Uncertainty and Confidence Handling** (1 hour)
+  - Confidence estimation for LLM outputs
+  - Uncertainty quantification methods
+  - Fallback and error recovery
+  - Human-in-the-loop integration
 
-## Assignments Due
-- Assignment 9.1: Whisper Setup and Testing (Due Day 2)
-- Assignment 9.2: Voice Command Processing System (Due Day 5)
+### Afternoon Session (3 hours)
+- **Practical Exercise: LLM-Powered Planning** (2.5 hours)
+  - Implement LLM-based task planner
+  - Create uncertainty handling system
+  - Test with complex multi-step tasks
+  - Validate planning accuracy and safety
 
-## Assessment
-- Whisper installation and configuration: 15%
-- Audio processing pipeline: 25%
-- Real-time recognition implementation: 30%
-- VLA integration: 20%
+- **System Integration and Testing** (0.5 hours)
+  - End-to-end testing of LLM integration
+  - Performance validation
+  - Safety verification
+  - Documentation of system behavior
 
-## Resources
-- [OpenAI Whisper](https://github.com/openai/whisper)
-- [Whisper Documentation](https://github.com/openai/whisper#readme)
-- [Audio Processing for Robotics](https://arxiv.org/abs/2301.12973)
-- [Week 9 Slides](#) (to be posted)
+## Day 5: LLM-Robotics Assessment and Safety
+### Morning Session (2 hours)
+- **Comprehensive LLM Integration** (1.5 hours)
+  - Complete LLM-robotic system implementation
+  - Test with diverse command scenarios
+  - Validate safety and reliability
+  - Document system capabilities and limitations
 
-## Next Week Preview
-Week 10 covers LLM integration for planning and reasoning in VLA systems, including task decomposition and execution planning.
+- **Week Review and Q&A** (0.5 hours)
+  - Review key concepts and implementation challenges
+  - Address remaining questions
+  - Prepare for next week's topics
+
+### Afternoon Session (2 hours)
+- **Safety and Reliability Assessment** (1.5 hours)
+  - Comprehensive safety validation
+  - Reliability testing under various conditions
+  - Performance benchmarking
+  - Documentation of safety mechanisms
+
+- **Week 10 Preview and Preparation** (0.5 hours)
+  - Overview of speech processing and Whisper
+  - Required installations and setup
+  - Assignment of preliminary Week 10 tasks
+
+## Resources and Materials
+- LLM documentation and API references
+- Prompt engineering best practices
+- Robotics integration frameworks
+- Safety and validation guidelines
+- Performance benchmarking tools
+
+## Assignments
+1. Implement complete LLM integration with robotic system
+2. Develop effective prompt engineering for robotics tasks
+3. Create context management system for LLM interactions
+4. Document safety mechanisms and validation procedures
+
+## Assessment Methods
+- Practical implementation of LLM-robotic integration
+- Prompt engineering effectiveness and optimization
+- Context management system functionality
+- Safety and reliability validation
+
+## Support and Office Hours
+- Daily office hours: 4-5 PM
+- LLM integration troubleshooting sessions
+- Prompt engineering optimization support
+- Safety system validation assistance
+
+This week focuses on advanced integration of large language models with robotic systems, emphasizing safe and effective deployment of LLM capabilities for robotics applications.

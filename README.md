@@ -1,54 +1,28 @@
-# Physical AI & Humanoid Robotics Book
+# Physical AI Humanoid Robotics Educational Platform
 
-Welcome to the comprehensive guide on **Physical AI & Humanoid Robotics**. This book is designed to bridge the gap between digital artificial intelligence and physical robot control, enabling students to apply AI knowledge to control humanoid robots in both simulated and real-world environments.
+Welcome to the Physical AI Humanoid Robotics educational platform! This comprehensive curriculum covers everything from ROS2 fundamentals to advanced vision-language-action systems for humanoid robots.
 
 ## Overview
 
-This Docusaurus-based book covers:
+This educational platform is designed to provide a complete learning experience for students interested in physical AI and humanoid robotics. The curriculum is divided into modules that build upon each other, taking students from basic concepts to advanced implementations.
 
-- **Module 1**: ROS 2 Fundamentals (nodes, topics, services, rclpy, URDF)
-- **Module 2**: Simulation Environments (Gazebo, Unity, physics simulation)
-- **Module 3**: NVIDIA Isaac Platform (Isaac Sim, Isaac ROS, Nav2)
-- **Module 4**: Vision-Language-Action (VLA) Systems (Whisper, LLMs, integration)
+## Modules
 
-## Structure
-
-The content is organized into:
-- **Introduction**: Core concepts of Physical AI and embodied intelligence
-- **Modules**: Detailed technical content for each topic
-- **Weekly Breakdown**: 13-week academic quarter schedule
-- **Assessments**: Project guidelines and evaluation criteria
-- **Hardware Requirements**: Options for different budget levels
+1. **ROS2 Fundamentals** - Learn the basics of Robot Operating System 2
+2. **Simulation** - Master simulation environments like Gazebo and Unity
+3. **NVIDIA Isaac** - Work with NVIDIA's robotics platform
+4. **Vision-Language-Action** - Integrate perception, language, and action systems
 
 ## Getting Started
 
-To run this documentation locally:
-
-1. Clone the repository
+1. Clone this repository
 2. Install dependencies: `npm install`
 3. Start the development server: `npm start`
-4. Open your browser to http://localhost:3000
 
-## Target Audience
+## Contributing
 
-This book is designed for:
-- Undergraduate/Graduate students in robotics
-- Researchers in embodied AI
-- Engineers working with humanoid robots
-- Anyone interested in the intersection of AI and physical systems
-
-## Features
-
-- Comprehensive coverage of modern robotics tools
-- Practical exercises and projects
-- Integration of simulation and real-world applications
-- Hardware requirements for different implementation levels
-- Assessment guidelines for educational use
-
-## Deployment
-
-This book is built with Docusaurus and deployed to GitHub Pages for easy access and navigation.
+We welcome contributions to improve the curriculum. Please read our contribution guidelines in the docs.
 
 ## License
 
-This educational content is made available for educational and research purposes.
+This project is licensed under the MIT License.

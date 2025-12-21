@@ -1,67 +1,71 @@
-{
-  "modules": [
-    {
-      "id": "module-1-ros2",
-      "title": "ROS 2 Fundamentals",
-      "topics": [
-        "Nodes",
-        "Topics",
-        "Services",
-        "rclpy",
-        "URDF"
-      ],
-      "duration": "3 weeks",
-      "objectives": [
-        "Understand ROS 2 architecture",
-        "Create nodes, topics, and services",
-        "Define robot models in URDF"
-      ]
-    },
-    {
-      "id": "module-2-simulation",
-      "title": "Simulation Environments",
-      "topics": [
-        "Gazebo",
-        "Unity",
-        "Physics Simulation",
-        "Sensor Modeling"
-      ],
-      "duration": "2 weeks",
-      "objectives": [
-        "Create simulation environments",
-        "Model physics and sensors",
-        "Test robot behaviors in simulation"
-      ]
-    },
-    {
-      "id": "module-3-nvidia-isaac",
-      "title": "NVIDIA Isaac Platform",
-      "topics": [
-        "Isaac Sim",
-        "Isaac ROS",
-        "Nav2"
-      ],
-      "duration": "3 weeks",
-      "objectives": [
-        "Use Isaac Sim for complex robotic tasks",
-        "Integrate perception and control systems",
-        "Implement navigation with Nav2"
-      ]
-    },
-    {
-      "id": "module-4-vla",
-      "title": "Vision-Language-Action Systems",
-      "topics": [
-        "Whisper",
-        "LLMs",
-        "Vision-Language-Action Integration"
-      ],
-      "duration": "3 weeks",
-      "objectives": [
-        "Process voice commands",
-        "Generate robot actions",
-        "Create complete Physical AI systems"
-      ]
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "title": "ROS2 Fundamentals",
+    "description": "Learn the basics of Robot Operating System 2, including nodes, topics, services, and actions.",
+    "duration": "2 weeks",
+    "objectives": [
+      "Understand ROS2 architecture and concepts",
+      "Create and manage ROS2 nodes, topics, and services",
+      "Implement robot control using rclpy",
+      "Define robot models using URDF",
+      "Debug and troubleshoot ROS2 systems"
+    ],
+    "prerequisites": [
+      "Basic programming knowledge in Python",
+      "Understanding of Linux command line",
+      "Familiarity with package management systems"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Simulation",
+    "description": "Master simulation environments like Gazebo and Unity for testing and developing robotic systems.",
+    "duration": "2 weeks",
+    "objectives": [
+      "Set up and configure simulation environments",
+      "Model robot sensors and physics properties",
+      "Implement physics simulations for robotic systems",
+      "Test robot algorithms in simulated environments",
+      "Transition from simulation to real-world deployment"
+    ],
+    "prerequisites": [
+      "Completion of Module 1 or equivalent knowledge",
+      "Basic understanding of physics concepts"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "NVIDIA Isaac",
+    "description": "Work with NVIDIA's robotics platform for GPU-accelerated processing and advanced simulation.",
+    "duration": "3 weeks",
+    "objectives": [
+      "Utilize NVIDIA Isaac Sim for advanced robotics simulation",
+      "Implement Isaac ROS for perception and navigation",
+      "Configure and use Navigation2 (Nav2) for robot navigation",
+      "Leverage NVIDIA's GPU-accelerated robotics tools",
+      "Integrate perception systems for autonomous robot operation"
+    ],
+    "prerequisites": [
+      "Completion of Modules 1-2 or equivalent knowledge",
+      "Access to NVIDIA GPU with CUDA support"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Vision-Language-Action Systems",
+    "description": "Integrate perception, cognition, and action in unified systems using large language models.",
+    "duration": "4 weeks",
+    "objectives": [
+      "Design and implement vision-language-action systems",
+      "Integrate large language models (LLMs) with robotic systems",
+      "Process audio input using Whisper for voice commands",
+      "Create embodied AI systems that perceive, reason, and act",
+      "Implement end-to-end learning for robot manipulation"
+    ],
+    "prerequisites": [
+      "Completion of Modules 1-3 or equivalent knowledge",
+      "Basic understanding of machine learning concepts"
+    ]
+  }
+]

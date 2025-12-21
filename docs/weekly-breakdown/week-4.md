@@ -2,111 +2,171 @@
 sidebar_position: 4
 ---
 
-# Week 4: Unity Simulation Environment
+# Week 4: Unity Simulation and Advanced Graphics
 
 ## Learning Objectives
-By the end of Week 4, students will be able to:
-- Set up Unity for robotics simulation using Isaac ROS packages
-- Import and configure robot models in Unity
-- Implement sensor simulation in Unity environment
-- Compare Gazebo and Unity simulation approaches
+By the end of this week, students will be able to:
+- Set up and configure Unity for robotics simulation
+- Implement advanced graphics and rendering techniques
+- Integrate Unity with ROS2 using the ROS TCP Connector
+- Create photorealistic simulation environments
 
-## Day 1: Unity Robotics Setup
-### Topics Covered
-- Unity installation and Robotics packages
-- URDF Importer for Unity
-- ROS-TCP-Connector setup
-- Unity-ROS communication protocols
+## Day 1: Unity Setup and Introduction
+### Morning Session (3 hours)
+- **Unity Installation and Configuration** (1.5 hours)
+  - Unity Hub and Editor installation
+  - Robotics packages and dependencies
+  - System requirements and optimization
+  - Project setup and organization
 
-### Readings
-- Module 2, Sections 2.1-2.2: Unity Simulation Introduction
-- Unity Robotics Hub documentation
+- **Unity for Robotics Overview** (1.5 hours)
+  - Unity Robotics Hub features and capabilities
+  - Comparison with Gazebo and other simulators
+  - Advantages of photorealistic simulation
+  - Integration with ROS2 ecosystem
 
-### Activities
-- Install Unity with Robotics packages
-- Import URDF Importer package
-- Set up ROS-TCP-Connector
-- Test basic Unity-ROS communication
+### Afternoon Session (3 hours)
+- **Basic Unity Scene Creation** (2 hours)
+  - Creating first Unity robotics scene
+  - Importing and configuring robot models
+  - Basic lighting and environment setup
+  - Camera setup and visualization
 
-## Day 2: Robot Model Integration
-### Topics Covered
-- Importing URDF models into Unity
-- Physics configuration for Unity
-- Joint and actuator setup
-- Robot kinematics in Unity
+- **Unity Interface and Tools** (1 hour)
+  - Scene and game object management
+  - Inspector and hierarchy panels
+  - Transform and component systems
+  - Asset management and organization
 
-### Readings
-- Module 2, Sections 2.3-2.4: Unity Robot Integration
-- Unity physics and robotics documentation
+## Day 2: Unity Physics and Robotics Components
+### Morning Session (3 hours)
+- **Unity Physics System** (2 hours)
+  - NVIDIA PhysX integration and configuration
+  - Rigid body components and properties
+  - Collision detection and response
+  - Joint systems and constraints
 
-### Activities
-- Import robot model from Week 2 URDF
-- Configure Unity physics properties
-- Set up robot joints and constraints
-- Test robot movement in Unity
+- **Robotics-Specific Components** (1 hour)
+  - Articulation Body for robotic joints
+  - Inverse kinematics setup
+  - Collision and trigger systems
+  - Physics optimization for robotics
 
-## Day 3: Sensor Simulation in Unity
-### Topics Covered
-- Camera simulation in Unity
-- LIDAR simulation using raycasting
-- IMU and other sensor types
-- Sensor noise modeling
+### Afternoon Session (3 hours)
+- **Practical Exercise: Unity Robot Setup** (2 hours)
+  - Import robot model into Unity
+  - Configure physics properties and joints
+  - Set up basic movement and control
+  - Test physics behavior and stability
 
-### Readings
-- Module 2, Sections 2.5-2.6: Unity Sensor Modeling
-- Unity sensor simulation techniques
+- **Physics Parameter Tuning** (1 hour)
+  - Mass, friction, and restitution configuration
+  - Joint limits and drive settings
+  - Performance optimization for physics
+  - Comparison with Gazebo physics behavior
 
-### Activities
-- Add camera sensor to Unity robot
-- Implement LIDAR simulation
-- Configure sensor noise models
-- Validate sensor outputs
+## Day 3: ROS2 Integration with Unity
+### Morning Session (3 hours)
+- **ROS TCP Connector Setup** (2 hours)
+  - Installation and configuration
+  - Network setup and communication
+  - Message type compatibility
+  - Connection management and error handling
 
-## Day 4: Environment Creation
-### Topics Covered
-- Creating 3D environments in Unity
-- Terrain and obstacle generation
-- Lighting and atmospheric effects
-- Performance optimization
+- **ROS2 Message Integration** (1 hour)
+  - Standard message types in Unity
+  - Custom message handling
+  - Publisher and subscriber implementation
+  - Service and action integration
 
-### Readings
-- Module 2, Sections 2.7-2.8: Unity Environment Design
-- Unity environment creation best practices
+### Afternoon Session (3 hours)
+- **Practical Exercise: ROS2-Unity Communication** (2 hours)
+  - Set up ROS2 publisher/subscriber in Unity
+  - Control robot from ROS2 topics
+  - Publish sensor data to ROS2
+  - Test bidirectional communication
 
-### Activities
-- Create Unity environment matching Week 3 Gazebo world
-- Add lighting and atmospheric effects
-- Optimize environment for performance
-- Test robot navigation in Unity environment
+- **Message Synchronization** (1 hour)
+  - Timing and synchronization challenges
+  - Buffer management and data consistency
+  - Error handling and recovery
+  - Performance optimization for communication
 
-## Day 5: Gazebo vs Unity Comparison
-### Topics Covered
-- Performance comparison
-- Visual fidelity differences
-- Physics simulation differences
-- Use case selection criteria
+## Day 4: Advanced Graphics and Perception
+### Morning Session (3 hours)
+- **Photorealistic Rendering** (2 hours)
+  - High-quality lighting and shadows
+  - Physically-based materials and textures
+  - Post-processing effects
+  - Real-time ray tracing capabilities
 
-### Activities
-- Run identical scenarios in both simulators
-- Compare performance metrics
-- Analyze visual and physics differences
-- Document findings and recommendations
+- **Sensor Simulation in Unity** (1 hour)
+  - Camera sensor configuration and calibration
+  - Depth sensor implementation
+  - Semantic and instance segmentation
+  - Multi-camera systems
 
-## Assignments Due
-- Assignment 4.1: Unity Robot Integration (Due Day 3)
-- Assignment 4.2: Unity Environment Creation (Due Day 5)
+### Afternoon Session (3 hours)
+- **Perception Pipeline Implementation** (2 hours)
+  - Computer vision in Unity
+  - Image processing and analysis
+  - Object detection and tracking
+  - Sensor fusion techniques
 
-## Assessment
-- Unity-ROS integration: 20%
-- Robot model configuration: 25%
-- Sensor simulation implementation: 25%
-- Simulation comparison analysis: 15%
+- **Performance Optimization** (1 hour)
+  - Rendering performance optimization
+  - Level of detail (LOD) systems
+  - Occlusion culling and batching
+  - GPU vs. CPU workload distribution
 
-## Resources
-- [Unity Robotics Hub](https://github.com/Unity-Technologies/Unity-Robotics-Hub)
-- [URDF Importer Documentation](https://github.com/Unity-Technologies/URDF-Importer)
-- [Unity Perception](https://github.com/Unity-Technologies/Unity-Perception)
-- [Week 4 Slides](#) (to be posted)
+## Day 5: Unity ML-Agents and Advanced Features
+### Morning Session (2 hours)
+- **Unity ML-Agents Integration** (1.5 hours)
+  - ML-Agents toolkit setup and configuration
+  - Reinforcement learning environment creation
+  - Training and inference workflows
+  - Robotics-specific ML applications
 
-## Next Week Preview
-Week 5 introduces NVIDIA Isaac Platform with Isaac Sim for high-fidelity simulation and Isaac ROS for accelerated perception.
+- **Week Review and Q&A** (0.5 hours)
+  - Review key concepts and implementation challenges
+  - Address remaining questions
+  - Prepare for next week's topics
+
+### Afternoon Session (2 hours)
+- **Comprehensive Assessment** (1.5 hours)
+  - Complete Unity simulation with ROS2 integration
+  - Test perception and control systems
+  - Validate performance and accuracy
+  - Document findings and recommendations
+
+- **Week 5 Preview and Preparation** (0.5 hours)
+  - Overview of NVIDIA Isaac platform
+  - Required installations and setup
+  - Assignment of preliminary Week 5 tasks
+
+## Resources and Materials
+- Unity Robotics documentation and tutorials
+- ROS TCP Connector setup guides
+- ML-Agents toolkit resources
+- Graphics and rendering optimization guides
+- Performance benchmarking tools
+
+## Assignments
+1. Create a complete Unity robotics simulation with ROS2 integration
+2. Implement photorealistic rendering for robot perception
+3. Configure and test sensor simulation in Unity
+4. Document performance comparison with Gazebo simulation
+
+## Assessment Methods
+- Practical implementation of Unity-ROS2 integration
+- Graphics quality and rendering performance
+- Sensor simulation accuracy and realism
+- Communication reliability and latency
+
+## Support and Office Hours
+- Daily office hours: 4-5 PM
+- Unity-specific troubleshooting sessions
+- Graphics optimization assistance
+- ROS2-Unity integration support
+
+This week introduces students to Unity as a powerful simulation platform for robotics, emphasizing photorealistic graphics, advanced physics, and seamless ROS2 integration for creating high-fidelity simulation environments.

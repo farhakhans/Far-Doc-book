@@ -2,105 +2,170 @@
 sidebar_position: 2
 ---
 
-# Week 2: ROS 2 Advanced Concepts & Robot Modeling
+# Week 2: ROS2 Advanced Concepts and URDF Modeling
 
 ## Learning Objectives
-By the end of Week 2, students will be able to:
-- Implement ROS 2 nodes using the rclpy Python client library
-- Create and interpret URDF (Unified Robot Description Format) files
-- Model simple robots with proper kinematic chains
-- Integrate robot models with ROS 2 systems
+By the end of this week, students will be able to:
+- Implement advanced ROS2 communication patterns
+- Create complex robot models using URDF and Xacro
+- Integrate sensors into robot models
+- Configure robot control systems
 
-## Day 1: rclpy Deep Dive
-### Topics Covered
-- Python client library architecture
-- Node lifecycle management
-- Publisher and subscriber implementation in Python
-- Service and client implementation in Python
+## Day 1: Advanced ROS2 Communication
+### Morning Session (3 hours)
+- **ROS2 Actions and Services** (2 hours)
+  - Advanced service implementation with custom messages
+  - Action servers and clients for long-running tasks
+  - Parameter servers and dynamic reconfiguration
+  - Quality of Service (QoS) settings and optimization
 
-### Readings
-- Module 1, Sections 3.1-3.3: rclpy Fundamentals
-- ROS 2 Python client library documentation
+- **Custom Message and Service Types** (1 hour)
+  - Creating custom .msg and .srv files
+  - Building and using custom message types
+  - Best practices for message design
+  - Versioning and compatibility considerations
 
-### Activities
-- Implement advanced publisher with custom message types
-- Create subscriber with callback functions
-- Develop service server and client in Python
+### Afternoon Session (3 hours)
+- **ROS2 Launch Files and Compositions** (2 hours)
+  - Advanced launch file creation and configuration
+  - Parameter files and YAML configurations
+  - Node compositions for performance optimization
+  - Conditional launches and environment variables
 
-## Day 2: Introduction to URDF
-### Topics Covered
-- URDF (Unified Robot Description Format) basics
-- Links, joints, and their properties
-- Visual and collision elements
-- Inertial properties and dynamics
+- **Practical Exercise: Advanced Communication** (1 hour)
+  - Implement action server for robot navigation
+  - Create custom service for robot calibration
+  - Configure launch files for complex system startup
 
-### Readings
-- Module 1, Sections 4.1-4.2: URDF Fundamentals
-- URDF specification and best practices
+## Day 2: URDF Advanced Modeling
+### Morning Session (3 hours)
+- **Complex URDF Structures** (2 hours)
+  - Multi-link robot configurations
+  - Transmission definitions for actuators
+  - Joint types and constraints (revolute, prismatic, continuous)
+  - Proper mass and inertia calculations
 
-### Activities
-- Create simple URDF model of a mobile robot
-- Add visual and collision properties
-- Validate URDF with check_urdf tool
+- **URDF Best Practices** (1 hour)
+  - Organizing complex robot models
+  - Reusability and modular design principles
+  - Validation and debugging techniques
+  - Performance optimization strategies
 
-## Day 3: Complex Robot Models
-### Topics Covered
-- Multi-link robot modeling
-- Joint types and constraints
-- Transmission elements
-- Gazebo extensions in URDF
+### Afternoon Session (3 hours)
+- **Xacro for Complex Models** (2 hours)
+  - Xacro syntax and capabilities
+  - Macros and parameterization
+  - Mathematical expressions in Xacro
+  - Including and inheriting Xacro files
 
-### Readings
-- Module 1, Sections 4.3-4.4: Advanced URDF
-- Gazebo-ROS integration in URDF
+- **Hands-on: Create Complex Robot Model** (1 hour)
+  - Design and implement multi-degree-of-freedom robot
+  - Use Xacro for parameterized design
+  - Validate model with check_urdf tool
 
-### Activities
-- Model a 2-link manipulator
-- Add different joint types (revolute, prismatic, continuous)
-- Integrate with Gazebo simulation
+## Day 3: Sensor Integration in URDF
+### Morning Session (3 hours)
+- **Sensor Modeling in URDF** (2 hours)
+  - Camera sensor integration and configuration
+  - LiDAR and IMU sensor placement
+  - Physical properties of sensors
+  - Coordinate frame definitions and transformations
 
-## Day 4: Robot State Publishing
-### Topics Covered
-- Robot State Publisher
-- Joint State Publisher
-- TF (Transform) tree concepts
-- URDF to TF broadcasting
+- **Gazebo Sensor Plugins** (1 hour)
+  - Available sensor plugins in Gazebo
+  - Configuring sensor parameters
+  - Noise models and realistic simulation
+  - Sensor data publishing to ROS2 topics
 
-### Readings
-- Module 1, Sections 4.5-4.6: Robot State Management
-- TF and robot state publisher documentation
+### Afternoon Session (3 hours)
+- **Practical Exercise: Full Robot Model** (2 hours)
+  - Integrate multiple sensors into robot model
+  - Configure Gazebo plugins for all sensors
+  - Validate sensor data publication
+  - Test in simulation environment
 
-### Activities
-- Set up robot state publisher with URDF
-- Publish joint states for robot model
-- Visualize robot in RViz2
+- **Coordinate Frame Management** (1 hour)
+  - Understanding TF (Transform) system
+  - Static and dynamic transforms
+  - TF debugging and visualization
+  - Common TF-related issues and solutions
 
-## Day 5: Week 2 Integration Lab
-### Topics Covered
-- Integration of rclpy with URDF models
-- Robot simulation setup
-- Troubleshooting robot models
+## Day 4: Robot Control Systems
+### Morning Session (3 hours)
+- **ROS2 Control Framework** (2 hours)
+  - ROS2 Control architecture and components
+  - Hardware interface implementation
+  - Controller manager configuration
+  - Available controller types (position, velocity, effort)
 
-### Activities
-- Complete integrated robot system
-- Test robot in simulation environment
-- Debug common URDF issues
-- Prepare for Week 3
+- **Joint State and Robot State Publishers** (1 hour)
+  - Joint state publisher for non-actuated joints
+  - Robot state publisher for TF tree generation
+  - Configuration and optimization
+  - Integration with robot models
 
-## Assignments Due
-- Assignment 2.1: Advanced rclpy Implementation (Due Day 2)
-- Assignment 2.2: URDF Robot Model (Due Day 5)
+### Afternoon Session (3 hours)
+- **Practical Exercise: Robot Control Setup** (2 hours)
+  - Configure ROS2 Control for robot model
+  - Implement hardware interface
+  - Set up controller manager and controllers
+  - Test control in simulation
 
-## Assessment
-- rclpy implementation: 25%
-- URDF model creation and validation: 30%
-- Integration with robot state publishing: 20%
+- **Control System Tuning** (1 hour)
+  - PID controller parameter tuning
+  - Performance optimization techniques
+  - Safety considerations in control systems
+  - Testing and validation procedures
 
-## Resources
-- [rclpy API Documentation](https://docs.ros.org/en/humble/p/rclpy/)
-- [URDF Tutorials](http://wiki.ros.org/urdf/Tutorials)
-- [Robot State Publisher](http://wiki.ros.org/robot_state_publisher)
-- [Week 2 Slides](#) (to be posted)
+## Day 5: Week Review and Integration
+### Morning Session (2 hours)
+- **Integration Exercise** (1.5 hours)
+  - Combine all week's concepts into complete robot system
+  - Implement sensors, control, and communication
+  - Test integrated system in simulation
+  - Troubleshoot integration issues
 
-## Next Week Preview
-Week 3 introduces simulation environments with Gazebo and Unity. Students will learn to create simulated environments and test robot behaviors in safe, repeatable conditions.
+- **Week Review and Q&A** (0.5 hours)
+  - Review key concepts and implementation challenges
+  - Address remaining questions
+  - Prepare for next week's topics
+
+### Afternoon Session (2 hours)
+- **Assessment and Evaluation** (1 hour)
+  - Practical implementation review
+  - Code quality and documentation assessment
+  - Peer code review and feedback
+  - Individual progress evaluation
+
+- **Week 3 Preview and Preparation** (1 hour)
+  - Overview of simulation physics concepts
+  - Required readings and preparation
+  - Assignment of preliminary Week 3 tasks
+  - Setup for advanced simulation tools
+
+## Resources and Materials
+- Advanced ROS2 tutorials and documentation
+- URDF and Xacro reference guides
+- ROS2 Control configuration examples
+- Sensor integration best practices
+- Physics simulation fundamentals
+
+## Assignments
+1. Create a complete robot model with 6+ degrees of freedom
+2. Integrate 3+ different sensor types with proper configuration
+3. Implement ROS2 Control system for the robot
+4. Document the complete robot configuration with diagrams
+
+## Assessment Methods
+- Practical implementation of complex robot model
+- Integration of sensors and control systems
+- Code quality and documentation standards
+- Performance and accuracy of simulation
+
+## Support and Office Hours
+- Daily office hours: 4-5 PM
+- Advanced ROS2 debugging sessions
+- Peer code review meetings
+- Additional simulation setup assistance
+
+This week builds on fundamental ROS2 concepts to create complex, realistic robot models with proper sensor integration and control systems, preparing students for advanced simulation and real-world robotics applications.

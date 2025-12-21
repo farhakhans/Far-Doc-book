@@ -1,38 +1,28 @@
-# Physical AI & Humanoid Robotics Backend
+# Backend Services
 
-This is the backend server for the Physical AI & Humanoid Robotics Book project. It provides API endpoints to support the Docusaurus frontend.
+This directory contains backend services for the Physical AI Humanoid Robotics educational platform.
 
-## Features
+## Services
 
-- Basic API endpoints for book metadata
-- Learning outcomes API
-- Health check endpoint
-- Static file serving for Docusaurus build output
+- **API Server**: REST API for educational content and assessments
+- **Database**: Storage for user progress, content metadata, and analytics
+- **Authentication**: User management and access control
+- **Simulation Services**: Backend for simulation environments
 
 ## Setup
 
-1. Install dependencies:
 ```bash
 cd backend
 npm install
-```
-
-2. Start the server:
-```bash
 npm start
 ```
 
-Or for development with auto-restart:
-```bash
-npm run dev
+## Configuration
+
+Environment variables are managed in `.env` file:
+
+```env
+PORT=3000
+DATABASE_URL=mongodb://localhost:27017/robotics-edu
+JWT_SECRET=your-jwt-secret
 ```
-
-## API Endpoints
-
-- `GET /api/health` - Server health check
-- `GET /api/book/metadata` - Book metadata
-- `GET /api/learning-outcomes` - Learning outcomes
-
-## Integration with Docusaurus
-
-The backend is designed to serve the Docusaurus build output from the `public/` directory. When you build your Docusaurus site with `npm run build`, the output should be placed in the `backend/public/` directory to be served by this backend.

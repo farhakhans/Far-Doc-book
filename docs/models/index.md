@@ -1,68 +1,59 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
-# AI Models Overview
+# Models Overview
 
-This section provides an overview of the various AI models and architectures used in Physical AI and Humanoid Robotics.
+This section provides an overview of the theoretical and practical models used throughout the Physical AI Humanoid Robotics curriculum. These models form the foundation for understanding how artificial intelligence and physical systems interact.
 
-## Vision-Language-Action (VLA) Models
+## Core Model Categories
 
-Vision-Language-Action models form the core of intelligent robotic systems, enabling robots to understand natural language commands, perceive their environment visually, and execute appropriate physical actions.
+### Physical AI Models
+- Theoretical frameworks for embodied intelligence
+- Learning algorithms for physical interaction
+- Sensorimotor integration models
+- Adaptive behavior systems
 
-### Key VLA Architectures
+### Humanoid Robotics Models
+- Kinematic and dynamic models
+- Control theory applications
+- Biomechanical inspiration
+- Locomotion and manipulation models
 
-- **RT-1 (Robotics Transformer 1)**: Transformer-based model for general-purpose robot control
-- **BC-Zero**: Behavior cloning model for learning from human demonstrations
-- **Instruct2Act**: Instruction-following models for robotic manipulation
-- **Palm-E**: Embodied multimodal language model
+## Learning Approach
 
-## Large Language Models (LLMs)
+The curriculum integrates these models through:
 
-Large Language Models serve as the reasoning and planning component in robotic systems, processing natural language commands and generating executable plans.
+- **Theoretical Study**: Understanding the mathematical and conceptual foundations
+- **Simulation**: Testing models in controlled virtual environments
+- **Implementation**: Applying models to real robotic systems
+- **Iteration**: Refining understanding through experimentation
 
-### Popular LLM Architectures
+## Prerequisites
 
-- **GPT Series**: Generative Pre-trained Transformers from OpenAI
-- **Claude**: Advanced AI assistant models from Anthropic
-- **LLaMA**: Open-source models from Meta
-- **PaLM**: Pathways Language Model with embodied capabilities
+Before diving into specific models, students should have:
 
-## Vision Models
+- Basic understanding of linear algebra
+- Knowledge of calculus and differential equations
+- Familiarity with probability and statistics
+- Programming experience in Python
 
-Computer vision models enable robots to perceive and understand their environment.
+## Model Evaluation
 
-### Object Detection Models
+Each model is evaluated based on:
 
-- **YOLO**: Real-time object detection
-- **R-CNN Variants**: Region-based convolutional neural networks
-- **DETR**: Detection Transformer
+- **Applicability**: How well it addresses specific robotics challenges
+- **Scalability**: Performance with increasing complexity
+- **Robustness**: Behavior under uncertainty and noise
+- **Interpretability**: Understanding of the model's decision-making process
 
-### Segmentation Models
+## Integration with Curriculum
 
-- **Mask R-CNN**: Instance segmentation
-- **DeepLab**: Semantic segmentation
-- **Segment Anything Model (SAM)**: Zero-shot segmentation
+Models are introduced progressively throughout the modules:
 
-## Audio Models
+- **Module 1**: Foundational models for ROS2 systems
+- **Module 2**: Simulation and control models
+- **Module 3**: Advanced perception and navigation models
+- **Module 4**: Vision-language-action integration models
 
-Audio processing models enable voice interaction and environmental sound understanding.
-
-### Speech Recognition
-
-- **OpenAI Whisper**: Automatic speech recognition
-- **Wav2Vec**: Self-supervised speech representation learning
-- **DeepSpeech**: End-to-end speech recognition
-
-## Model Integration in Robotics
-
-These models are integrated into robotic systems through:
-
-1. **Perception Pipeline**: Processing sensor data (cameras, microphones, etc.)
-2. **Planning Module**: Generating action sequences based on goals
-3. **Control System**: Executing low-level motor commands
-4. **Feedback Loop**: Continuous adjustment based on sensor input
-
-## Resources
-
-For more detailed information about specific models and their implementation, refer to the [Vision-Language-Action Systems](../modules/module-4-vla/index) module.
+Select from the specific model topics in the sidebar to explore detailed implementations and applications.

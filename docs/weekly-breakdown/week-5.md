@@ -2,111 +2,171 @@
 sidebar_position: 5
 ---
 
-# Week 5: NVIDIA Isaac Platform - Isaac Sim
+# Week 5: NVIDIA Isaac Platform Introduction
 
 ## Learning Objectives
-By the end of Week 5, students will be able to:
-- Install and configure Isaac Sim for high-fidelity simulation
-- Create complex environments using Omniverse
-- Implement GPU-accelerated physics simulation
-- Integrate with Isaac ROS perception pipelines
+By the end of this week, students will be able to:
+- Install and configure the NVIDIA Isaac platform
+- Understand Isaac Sim architecture and capabilities
+- Implement basic robotics applications using Isaac ROS
+- Integrate perception and navigation systems with Isaac tools
 
-## Day 1: Isaac Sim Installation and Setup
-### Topics Covered
-- Isaac Sim installation via Docker or Omniverse
-- System requirements and GPU configuration
-- Omniverse ecosystem introduction
-- Basic Isaac Sim interface
+## Day 1: Isaac Platform Overview and Installation
+### Morning Session (3 hours)
+- **NVIDIA Isaac Ecosystem** (2 hours)
+  - Overview of Isaac Sim, Isaac ROS, and Isaac Apps
+  - Hardware requirements and compatibility
+  - Integration with existing ROS2 workflows
+  - Advantages of GPU-accelerated robotics
 
-### Readings
-- Module 3, Sections 1.1-1.2: Isaac Sim Introduction
-- Isaac Sim installation guide and requirements
+- **Isaac Platform Installation** (1 hour)
+  - System requirements and prerequisites
+  - Isaac Sim installation methods (Docker, native, Omniverse)
+  - Isaac ROS package installation
+  - Environment validation and testing
 
-### Activities
-- Install Isaac Sim using recommended method
-- Verify GPU acceleration setup
-- Launch Isaac Sim and explore interface
-- Run basic simulation examples
+### Afternoon Session (3 hours)
+- **Isaac Sim First Steps** (2 hours)
+  - Launching and navigating Isaac Sim interface
+  - Basic scene creation and manipulation
+  - Robot import and configuration
+  - Initial simulation testing
 
-## Day 2: Environment Creation in Isaac Sim
-### Topics Covered
-- USD (Universal Scene Description) basics
-- Creating complex environments
-- Asset library utilization
-- Lighting and rendering setup
+- **USD (Universal Scene Description)** (1 hour)
+  - USD concepts and file structure
+  - Scene representation and composition
+  - Layering and variant systems
+  - USD in robotics applications
 
-### Readings
-- Module 3, Sections 1.3-1.4: Isaac Sim Environment Design
-- USD documentation and best practices
+## Day 2: Isaac Sim Advanced Features
+### Morning Session (3 hours)
+- **Isaac Sim Architecture** (2 hours)
+  - Kit framework and extension system
+  - Physics engine integration (PhysX)
+  - Rendering pipeline and RTX capabilities
+  - Multi-threading and performance optimization
 
-### Activities
-- Create custom indoor environment using USD
-- Import assets from Isaac asset library
-- Configure realistic lighting and materials
-- Test environment physics
+- **Robot Setup in Isaac Sim** (1 hour)
+  - URDF import and conversion to USD
+  - Joint configuration and dynamics
+  - Sensor placement and configuration
+  - Control interface setup
 
-## Day 3: Robot Integration and Physics
-### Topics Covered
-- Robot import and configuration in Isaac Sim
-- Physics properties and constraints
-- GPU-accelerated physics simulation
-- Joint and actuator configuration
+### Afternoon Session (3 hours)
+- **Practical Exercise: Isaac Robot Simulation** (2.5 hours)
+  - Import robot model into Isaac Sim
+  - Configure physics and control systems
+  - Add sensors (camera, LiDAR, IMU)
+  - Test basic movement and sensing
 
-### Readings
-- Module 3, Sections 1.5-1.6: Isaac Sim Robot Integration
-- PhysX integration with Isaac Sim
+- **Performance Optimization** (0.5 hours)
+  - Frame rate optimization techniques
+  - Resource utilization monitoring
+  - Quality vs. performance trade-offs
+  - Best practices for simulation efficiency
 
-### Activities
-- Import robot model into Isaac Sim
-- Configure physics properties for realistic behavior
-- Test robot movement and interactions
-- Optimize physics parameters
+## Day 3: Isaac ROS Integration
+### Morning Session (3 hours)
+- **Isaac ROS Package Overview** (1.5 hours)
+  - Available Isaac ROS packages and capabilities
+  - GPU-accelerated perception algorithms
+  - Integration with standard ROS2
+  - Performance benefits and use cases
 
-## Day 4: Sensor Integration and Simulation
-### Topics Covered
-- Advanced sensor simulation in Isaac Sim
-- Camera and LIDAR with realistic properties
-- Domain randomization for training
-- Synthetic data generation
+- **Isaac ROS Installation and Setup** (1.5 hours)
+  - Package installation and dependencies
+  - ROS2 bridge configuration
+  - Hardware acceleration setup
+  - Basic functionality testing
 
-### Readings
-- Module 3, Sections 1.7-1.8: Isaac Sim Sensor Simulation
-- Domain randomization techniques
+### Afternoon Session (3 hours)
+- **Practical Exercise: Isaac ROS Perception** (2 hours)
+  - Set up Isaac ROS AprilTag detection
+  - Configure camera and image processing pipeline
+  - Test GPU-accelerated processing
+  - Compare with CPU-only processing
 
-### Activities
-- Add high-fidelity sensors to robot
-- Configure realistic sensor properties
-- Implement domain randomization
-- Generate synthetic training data
+- **ROS2 Integration** (1 hour)
+  - Message publishing and subscription
+  - TF tree integration
+  - Parameter configuration and management
+  - Launch file creation for Isaac ROS
 
-## Day 5: Isaac Sim Optimization and Comparison
-### Topics Covered
-- Performance optimization techniques
-- Comparison with Gazebo and Unity
-- Use cases for different simulators
-- Best practices for Isaac Sim
+## Day 4: Isaac Navigation and SLAM
+### Morning Session (3 hours)
+- **Isaac Navigation Capabilities** (1.5 hours)
+  - Visual SLAM implementation in Isaac
+  - Occupancy grid localization
+  - Path planning and navigation
+  - Integration with Navigation2
 
-### Activities
-- Optimize Isaac Sim performance
-- Compare simulation quality with other platforms
-- Document performance metrics
-- Prepare for Isaac ROS integration
+- **Isaac SLAM Setup** (1.5 hours)
+  - Visual-inertial odometry configuration
+  - Map building and localization
+  - Performance optimization for SLAM
+  - Accuracy validation techniques
 
-## Assignments Due
-- Assignment 5.1: Isaac Sim Environment Creation (Due Day 3)
-- Assignment 5.2: Isaac Sim Robot Integration (Due Day 5)
+### Afternoon Session (3 hours)
+- **Practical Exercise: Isaac Navigation** (2.5 hours)
+  - Configure visual SLAM system
+  - Set up navigation stack with Isaac components
+  - Test autonomous navigation in simulation
+  - Validate localization accuracy
 
-## Assessment
-- Isaac Sim installation and setup: 15%
-- Environment creation and configuration: 25%
-- Robot integration and physics: 30%
-- Sensor simulation implementation: 20%
+- **System Integration** (0.5 hours)
+  - Combining perception, SLAM, and navigation
+  - Performance optimization
+  - Troubleshooting common issues
+  - Best practices for system stability
 
-## Resources
-- [Isaac Sim Documentation](https://docs.omniverse.nvidia.com/isaacsim/latest/)
-- [Omniverse Isaac](https://developer.nvidia.com/isaac-omniverse)
-- [USD Documentation](https://graphics.pixar.com/usd/release/)
-- [Week 5 Slides](#) (to be posted)
+## Day 5: Isaac Platform Integration and Assessment
+### Morning Session (2 hours)
+- **Complete Isaac System Integration** (1.5 hours)
+  - Combine Isaac Sim, Isaac ROS, and navigation
+  - End-to-end system testing
+  - Performance validation and optimization
+  - Documentation of integration process
 
-## Next Week Preview
-Week 6 focuses on Isaac ROS packages for GPU-accelerated perception and navigation systems.
+- **Week Review and Q&A** (0.5 hours)
+  - Review key concepts and implementation challenges
+  - Address remaining questions
+  - Prepare for next week's topics
+
+### Afternoon Session (2 hours)
+- **Comprehensive Assessment** (1.5 hours)
+  - Complete Isaac-based robotics application
+  - Test all integrated components
+  - Validate performance and accuracy
+  - Document findings and recommendations
+
+- **Week 6 Preview and Preparation** (0.5 hours)
+  - Overview of Navigation2 in detail
+  - Required readings and preparation
+  - Assignment of preliminary Week 6 tasks
+
+## Resources and Materials
+- Isaac Sim documentation and tutorials
+- Isaac ROS package documentation
+- NVIDIA Omniverse resources
+- GPU-accelerated robotics guides
+- Isaac platform best practices
+
+## Assignments
+1. Install and configure complete Isaac platform
+2. Create robot simulation in Isaac Sim with sensors
+3. Implement Isaac ROS perception pipeline
+4. Document performance comparison with other simulators
+
+## Assessment Methods
+- Practical implementation of Isaac Sim environment
+- Isaac ROS integration and functionality
+- Performance validation and optimization
+- System integration and documentation quality
+
+## Support and Office Hours
+- Daily office hours: 4-5 PM
+- Isaac-specific troubleshooting sessions
+- GPU acceleration optimization support
+- Isaac Sim-ROS2 integration assistance
+
+This week introduces students to the NVIDIA Isaac platform, emphasizing GPU-accelerated robotics capabilities, advanced simulation features, and integration with existing ROS2 workflows for high-performance robotics applications.
