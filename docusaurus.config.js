@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Physical AI Humanoid Robotics Education',
   tagline: 'Comprehensive curriculum for physical AI and humanoid robotics',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/f logo final (1).jpg',
 
   // Set the production url of your site here
   url: 'https://far-docusuraus.vercel.app', // Vercel deployment URL
@@ -58,6 +58,10 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+        },
       }),
     ],
   ],
@@ -71,7 +75,7 @@ const config = {
         title: 'Physical AI Humanoid Robotics',
         logo: {
           alt: 'Robot Logo',
-          src: 'img/robot-arm.svg',
+          src: 'img/f logo final (1).jpg',
         },
         items: [
           {
@@ -138,6 +142,14 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+
+  themes: [],
+  plugins: [],
+
+  customFields: {
+    // Development server proxy configuration (for documentation purposes)
+    // Actual proxying is handled differently in Docusaurus
+  },
 };
 
 export default config;
