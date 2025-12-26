@@ -2,6 +2,8 @@
 
 Welcome to the Physical AI Humanoid Robotics educational platform! This comprehensive curriculum covers everything from ROS2 fundamentals to advanced vision-language-action systems for humanoid robots.
 
+**Repository:** [https://github.com/farhakhans/Far-Doc-book](https://github.com/farhakhans/Far-Doc-book)
+
 ## Overview
 
 This educational platform is designed to provide a complete learning experience for students interested in physical AI and humanoid robotics. The curriculum is divided into modules that build upon each other, taking students from basic concepts to advanced implementations.
