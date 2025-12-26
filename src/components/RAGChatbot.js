@@ -2,26 +2,34 @@ import React, { useState, useRef, useEffect } from 'react';
 import './RAGChatbot.css';
 
 const RAGChatbot = () => {
-  // Load messages from localStorage to persist chat history
-  const loadMessages = () => {
-    const savedMessages = localStorage.getItem('ragChatMessages');
-    if (savedMessages) {
-      try {
-        return JSON.parse(savedMessages);
-      } catch (e) {
-        console.error('Error parsing saved messages:', e);
-        return [
-          { id: 1, text: "Hello! I'm your RAG chatbot for the Physical AI Humanoid Robotics book. Ask me anything about robotics!", sender: 'bot' }
-        ];
-      }
-    }
-    return [
-      { id: 1, text: "Hello! I'm your RAG chatbot for the Physical AI Humanoid Robotics book. Ask me anything about robotics!", sender: 'bot' }
-    ];
-  };
-
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState(loadMessages);
+  const [messages, setMessages] = useState([
+    { id: 1, text: "Hello! I'm your RAG chatbot for the Physical AI Humanoid Robotics book. Ask me anything about robotics!", sender: 'bot' }
+  ]);
+
+  // Load messages from localStorage to persist chat history (only on client side)
+  useEffect(() => {
+    const loadMessages = () => {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        const savedMessages = localStorage.getItem('ragChatMessages');
+        if (savedMessages) {
+          try {
+            return JSON.parse(savedMessages);
+          } catch (e) {
+            console.error('Error parsing saved messages:', e);
+            return [
+              { id: 1, text: "Hello! I'm your RAG chatbot for the Physical AI Humanoid Robotics book. Ask me anything about robotics!", sender: 'bot' }
+            ];
+          }
+        }
+      }
+      return [
+        { id: 1, text: "Hello! I'm your RAG chatbot for the Physical AI Humanoid Robotics book. Ask me anything about robotics!", sender: 'bot' }
+      ];
+    };
+
+    setMessages(loadMessages());
+  }, []);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
@@ -29,9 +37,11 @@ const RAGChatbot = () => {
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
 
-  // Save messages to localStorage whenever messages change
+  // Save messages to localStorage whenever messages change (only on client side)
   useEffect(() => {
-    localStorage.setItem('ragChatMessages', JSON.stringify(messages));
+    if (typeof window !== 'undefined' && window.localStorage) {
+      localStorage.setItem('ragChatMessages', JSON.stringify(messages));
+    }
   }, [messages]);
 
   // Check server status periodically
@@ -210,7 +220,9 @@ const RAGChatbot = () => {
     setMessages([
       { id: 1, text: "Hello! I'm your RAG chatbot for the Physical AI Humanoid Robotics book. Ask me anything about robotics!", sender: 'bot' }
     ]);
-    localStorage.removeItem('ragChatMessages');
+    if (typeof window !== 'undefined' && window.localStorage) {
+      localStorage.removeItem('ragChatMessages');
+    }
   };
 
   const toggleChat = () => {

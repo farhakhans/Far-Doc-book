@@ -218,7 +218,11 @@
       "Bash(curl -X POST http://localhost:3001/api/rag/query -H \"Content-Type: application/json\" -d \"{\"\"query\"\":\"\"What are sensors?\"\"}\")",
       "Bash(git init)",
       "Bash(git remote set-url origin https://github.com/farhakhans/Far-Doc-book.git)",
-      "Bash(del nul)"
+      "Bash(del nul)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd enhanced RAG chatbot with toggle functionality\n\n- Implement robot-themed chatbot with toggle open/close functionality\n- Add quick, varied point-to-point answers for robotics/AI queries\n- Enhance UI with server status indicators and animations\n- Add keyboard shortcuts and improved accessibility\n- Fix server connection and response time issues\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(npx vercel --version)",
+      "Bash(npx vercel --public --force)",
+      "Bash(npx vercel --public --force --yes)"
     ]
   }
 }
