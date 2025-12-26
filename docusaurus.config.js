@@ -13,14 +13,14 @@ const config = {
   favicon: 'img/f logo final (1).jpg',
 
   // Set the production url of your site here
-  url: 'https://far-docusuraus.vercel.app', // Vercel deployment URL
+  url: 'https://far-doc-book-axnglo8dl-farhakhans-projects.vercel.app', // Vercel deployment URL
   // Set the /<baseUrl>/ pathname under which your site is served
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'farhakhans', // Your GitHub org/user name.
-  projectName: 'Far-Docusuraus', // Your repo name.
+  projectName: 'Far-Doc-book', // Your repo name.
 
   onBrokenLinks: 'warn',
   onBrokenAnchors: 'warn',
@@ -46,14 +46,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/farhakhans/Far-Docusuraus/tree/main/',
+            'https://github.com/farhakhans/Far-Doc-book/tree/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/farhakhans/Far-Docusuraus/tree/main/',
+            'https://github.com/farhakhans/Far-Doc-book/tree/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -86,7 +86,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/farhakhans/Far-Docusuraus',
+            href: 'https://github.com/farhakhans/Far-Doc-book',
             label: 'GitHub',
             position: 'right',
           },
@@ -130,7 +130,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/farhakhans/Far-Docusuraus',
+                href: 'https://github.com/farhakhans/Far-Doc-book',
               },
             ],
           },

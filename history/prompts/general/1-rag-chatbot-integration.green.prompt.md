@@ -22,16 +22,16 @@ links:
   adr: null
   pr: null
 files:
-  - d:\Far-Docusuraus\docusaurus.config.js
-  - d:\Far-Docusuraus\docs\models\index.md
-  - d:\Far-Docusuraus\rag-chatbot\server-upgradeable.mjs
-  - d:\Far-Docusuraus\src\components\RAGChatbot.js
-  - d:\Far-Docusuraus\src\components\RAGChatbot.module.css
-  - d:\Far-Docusuraus\src\components\ChatBot.js
-  - d:\Far-Docusuraus\src\components\ChatBot.module.css
-  - d:\Far-Docusuraus\src\theme\Root.js
-  - d:\Far-Docusuraus\rag-chatbot\mcp-adapter.js
-  - d:\Far-Docusuraus\rag-chatbot\.env
+  - d:\Far-Doc-book\docusaurus.config.js
+  - d:\Far-Doc-book\docs\models\index.md
+  - d:\Far-Doc-book\rag-chatbot\server-upgradeable.mjs
+  - d:\Far-Doc-book\src\components\RAGChatbot.js
+  - d:\Far-Doc-book\src\components\RAGChatbot.module.css
+  - d:\Far-Doc-book\src\components\ChatBot.js
+  - d:\Far-Doc-book\src\components\ChatBot.module.css
+  - d:\Far-Doc-book\src\theme\Root.js
+  - d:\Far-Doc-book\rag-chatbot\mcp-adapter.js
+  - d:\Far-Doc-book\rag-chatbot\.env
 tests: []
 ---
 
@@ -82,16 +82,16 @@ none
 
 ## Files Summary
 
-- d:\Far-Docusuraus\docusaurus.config.js: Updated footer and navigation links
-- d:\Far-Docusuraus\docs\models\index.md: Created AI Models Overview page
-- d:\Far-Docusuraus\rag-chatbot\server-upgradeable.mjs: Complete RAG server implementation
-- d:\Far-Docusuraus\src\components\RAGChatbot.js: React component for RAG chatbot
-- d:\Far-Docusuraus\src\components\RAGChatbot.module.css: Styling for RAG chatbot
-- d:\Far-Docusuraus\src\components\ChatBot.js: Standalone chatbot component
-- d:\Far-Docusuraus\src\components\ChatBot.module.css: Styling for standalone chatbot
-- d:\Far-Docusuraus\src\theme\Root.js: Integration of chatbots into Docusaurus theme
-- d:\Far-Docusuraus\rag-chatbot\mcp-adapter.js: MCP server adapter for Claude
-- d:\Far-Docusuraus\rag-chatbot\.env: Configuration for Qdrant, Cohere, and services
+- d:\Far-Doc-book\docusaurus.config.js: Updated footer and navigation links
+- d:\Far-Doc-book\docs\models\index.md: Created AI Models Overview page
+- d:\Far-Doc-book\rag-chatbot\server-upgradeable.mjs: Complete RAG server implementation
+- d:\Far-Doc-book\src\components\RAGChatbot.js: React component for RAG chatbot
+- d:\Far-Doc-book\src\components\RAGChatbot.module.css: Styling for RAG chatbot
+- d:\Far-Doc-book\src\components\ChatBot.js: Standalone chatbot component
+- d:\Far-Doc-book\src\components\ChatBot.module.css: Styling for standalone chatbot
+- d:\Far-Doc-book\src\theme\Root.js: Integration of chatbots into Docusaurus theme
+- d:\Far-Doc-book\rag-chatbot\mcp-adapter.js: MCP server adapter for Claude
+- d:\Far-Doc-book\rag-chatbot\.env: Configuration for Qdrant, Cohere, and services
 
 ## Next Steps
 

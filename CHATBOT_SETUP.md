@@ -5,7 +5,7 @@
 To get your RAG chatbot working, you need to start the backend server:
 
 1. Open a new terminal/command prompt
-2. Navigate to your project directory: `cd C:\Users\Hp\Desktop\Far-Docusuraus`
+2. Navigate to your project directory: `cd C:\Users\Hp\Desktop\Far-Doc-book`
 3. Run the server with: `node server.js`
 4. The server should start on port 3001
 
